@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on Wookets Wove</title>
+    <link>/tags/music/</link>
+    <description>Recent content in Music on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Jul 2011 19:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spotify Initial Reaction</title>
+      <link>/blog/spotify-initial-reaction/</link>
+      <pubDate>Thu, 14 Jul 2011 19:00:00 +0000</pubDate>
+      
+      <guid>/blog/spotify-initial-reaction/</guid>
+      <description>Pros:
+- Streaming
+- UI / Searching is extremely fast
+- Can sync own music files
+Cons:
+- No &amp;lsquo;genius&amp;rsquo; mode custom playlists&amp;hellip; Can&amp;rsquo;t they make it so based on a song it loads a variety of music to create a playlist with new artists that I can find?
+- The UI is cumbersome. A better album view would be nice. Unless you&amp;rsquo;re searching their online database, everything revolves around playlists.</description>
+    </item>
+    
+  </channel>
+</rss>

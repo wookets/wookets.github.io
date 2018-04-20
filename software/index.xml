@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Softwares on Wookets Wove</title>
+    <link>/software/</link>
+    <description>Recent content in Softwares on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Apr 2018 22:21:25 -0500</lastBuildDate>
+    
+	<atom:link href="/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Repoir</title>
+      <link>/software/repoir/</link>
+      <pubDate>Thu, 19 Apr 2018 22:21:25 -0500</pubDate>
+      
+      <guid>/software/repoir/</guid>
+      <description>This project was created with help from a few friends at work.
+The goal of this is to scale out to dozens of sprint teams a tool which will enforce consistency across repos.
+Repoir Source</description>
+    </item>
+    
+    <item>
+      <title>Reeldata</title>
+      <link>/software/reeldata/</link>
+      <pubDate>Thu, 19 Apr 2018 22:17:45 -0500</pubDate>
+      
+      <guid>/software/reeldata/</guid>
+      <description>The point of reeldata is to hit a live API, but then cache the result, so that you can work offline or even store the data locally and right tests against it. Once you write your tests against the data, you can rerun reeldata to pull down fresh data and rerun your tests to see if the data contract changed.
+This obviously works best for read heavy APIs.
+Reeldata Source</description>
+    </item>
+    
+    <item>
+      <title>Inchworm</title>
+      <link>/software/inchworm/</link>
+      <pubDate>Thu, 19 Apr 2018 21:50:32 -0500</pubDate>
+      
+      <guid>/software/inchworm/</guid>
+      <description>Inchworm</description>
+    </item>
+    
+    <item>
+      <title>Wongo</title>
+      <link>/software/wongo/</link>
+      <pubDate>Sat, 31 Mar 2018 14:17:55 -0500</pubDate>
+      
+      <guid>/software/wongo/</guid>
+      <description>Wongo on Github</description>
+    </item>
+    
+    <item>
+      <title>Patent Buddy</title>
+      <link>/software/patent-buddy/</link>
+      <pubDate>Sat, 31 Mar 2018 13:33:24 -0500</pubDate>
+      
+      <guid>/software/patent-buddy/</guid>
+      <description>I wrote the original software for this application. When I was hired by ActiFi, I had to cease work on it due to conflict of interest.
+Patent Buddy</description>
+    </item>
+    
+    <item>
+      <title>Go REST API</title>
+      <link>/software/go-lang/</link>
+      <pubDate>Wed, 21 Mar 2018 22:31:29 -0500</pubDate>
+      
+      <guid>/software/go-lang/</guid>
+      <description>Github</description>
+    </item>
+    
+  </channel>
+</rss>

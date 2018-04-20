@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Wookets Wove</title>
+    <link>/tags/code/</link>
+    <description>Recent content in Code on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Feb 2012 18:14:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jackson JSON Deserializer using Groovy</title>
+      <link>/blog/jackson-json-deserializer-using-groovy/</link>
+      <pubDate>Wed, 22 Feb 2012 18:14:00 +0000</pubDate>
+      
+      <guid>/blog/jackson-json-deserializer-using-groovy/</guid>
+      <description>This took me about half a day to do&amp;hellip; Jackson&amp;rsquo;s documentation in certain places is a scattered shot of different ways based on version # and usually ending in half complete sentences or small specific pages that aren&amp;rsquo;t quite linked together in a relational sense. Jackson 2.0, I imagine, will further cludge the documentation due to refactors. But, by and large, it really is quite simple to write a deserializer or a serializer for that matter.</description>
+    </item>
+    
+    <item>
+      <title>Using Amplify.js to Mock Service Calls</title>
+      <link>/blog/using-amplify.js-to-mock-service-calls/</link>
+      <pubDate>Thu, 09 Feb 2012 13:48:00 +0000</pubDate>
+      
+      <guid>/blog/using-amplify.js-to-mock-service-calls/</guid>
+      <description>your-view-model.js
+
+services.js
+
+mock-services.js
+
+What&amp;rsquo;s happeing?&amp;nbsp;
+We are simply overriding out service.js with mock-services.js. So&amp;hellip; simply include the mock-service.js script AFTER you include the service.js script&amp;hellip; And once you don&amp;rsquo;t want to mock and more, simply comment out&amp;hellip;
+Resources
+http://api.jquery.com/jQuery.ajax/http://speakerdeck.com/u/dougneiner/p/streamline-your-ajax-requests-with-amplifyjs-and-jqueryhttp://amplifyjs.com/api/request/#url_substitution/routing</description>
+    </item>
+    
+    <item>
+      <title>Jackson Auto-Typing Objects</title>
+      <link>/blog/jackson-auto-typing-objects/</link>
+      <pubDate>Mon, 30 Jan 2012 14:06:00 +0000</pubDate>
+      
+      <guid>/blog/jackson-auto-typing-objects/</guid>
+      <description>I&amp;rsquo;m using the Jackson JSON framework to do some (de)+serialization for my web app, but as we all know&amp;hellip; JSON isn&amp;rsquo;t typed. Here is a quick auto-typer that I created that runs when the app starts up (in tomcat). Look through the resources / references down below for more info.
+First, create a basic mixin class.
+package wookets.json;
+import org.codehaus.jackson.annotate.JsonTypeInfo;
+import org.codehaus.jackson.annotate.JsonTypeInfo.As;
+import org.codehaus.jackson.annotate.JsonTypeInfo.Id;
+@JsonTypeInfo(use=Id.NAME, include=As.PROPERTY, property=&amp;rdquo;_type&amp;rdquo;)
+public class JacksonTyping {</description>
+    </item>
+    
+    <item>
+      <title>Amazon DynamoDB Groovy DAO Update</title>
+      <link>/blog/amazon-dynamodb-groovy-dao-update/</link>
+      <pubDate>Wed, 25 Jan 2012 11:44:00 +0000</pubDate>
+      
+      <guid>/blog/amazon-dynamodb-groovy-dao-update/</guid>
+      <description>Here is a an update version of the DAO from the previous post. I added update methods (very useful)&amp;hellip;
+Next I will be working on some relationship type logic. Meaning, having a table that holds relationships and specifying you want those relationships (a list of ids) that will query that, then query the actual keys table and return the objects you want&amp;hellip;
+Sorry about not posting on Github. Maybe one day I&amp;rsquo;ll get it up there.</description>
+    </item>
+    
+    <item>
+      <title>Groovy Amazon DynamoDB Simple Example</title>
+      <link>/blog/groovy-amazon-dynamodb-simple-example/</link>
+      <pubDate>Sun, 22 Jan 2012 09:43:00 +0000</pubDate>
+      
+      <guid>/blog/groovy-amazon-dynamodb-simple-example/</guid>
+      <description>The following is a two class example of Amazon&amp;rsquo;s DynamoDB. The first class is just a Dao (yes, I still prefer Daos over ARs).
+package wookets.dynamo
+import com.amazonaws.auth.AWSCredentials
+import com.amazonaws.auth.PropertiesCredentials
+import com.amazonaws.services.dynamodb.AmazonDynamoDBClient
+import com.amazonaws.services.dynamodb.model.AttributeValue
+import com.amazonaws.services.dynamodb.model.ComparisonOperator
+import com.amazonaws.services.dynamodb.model.DeleteItemRequest
+import com.amazonaws.services.dynamodb.model.DeleteItemResult
+import com.amazonaws.services.dynamodb.model.GetItemRequest
+import com.amazonaws.services.dynamodb.model.GetItemResult
+import com.amazonaws.services.dynamodb.model.Key
+import com.amazonaws.services.dynamodb.model.PutItemRequest
+import com.amazonaws.services.dynamodb.model.PutItemResult
+class DynamoDao {
+AmazonDynamoDBClient client
+DynamoDao() {
+InputStream credentialsAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(&amp;ldquo;AwsCredentials.properties&amp;rdquo;);
+AWSCredentials credentials = new PropertiesCredentials(credentialsAsStream);
+client = new AmazonDynamoDBClient(credentials);</description>
+    </item>
+    
+    <item>
+      <title>Amazon S3 Website Hosting DNS Gotchya</title>
+      <link>/blog/amazon-s3-website-hosting-dns-gotchya/</link>
+      <pubDate>Mon, 09 Jan 2012 15:13:00 +0000</pubDate>
+      
+      <guid>/blog/amazon-s3-website-hosting-dns-gotchya/</guid>
+      <description>Recently, while setting up a website on Amazon&amp;rsquo;s S3 (see here), I was also attempting to set the mx records of the domain to point to google apps (see here). But, the mx records were not updating.
+I thought this was a hover.com problem. Btw, I&amp;rsquo;ve never had a company answer my phone call faster than these guys. It is actually quite freaky and I was unprepared with my question. Literally took less than a second to reach and start talking to a human being.</description>
+    </item>
+    
+    <item>
+      <title>jQuery.Address Example</title>
+      <link>/blog/jquery.address-example/</link>
+      <pubDate>Mon, 12 Dec 2011 21:04:00 +0000</pubDate>
+      
+      <guid>/blog/jquery.address-example/</guid>
+      <description>Here is a very simple example of using jquery.address to create a single page external partial view app.
+Demo:&amp;nbsp;http://archive.wookets.com/examples/html5/jquery-address/
+And now I&amp;rsquo;m left very confused as to why there are other examples out there that are so much more complex&amp;hellip; I guess I&amp;rsquo;ll find out&amp;hellip;
+References
+http://www.asual.com/jquery/address/docs/http://api.jquery.com/html/http://api.jquery.com/jQuery.get/</description>
+    </item>
+    
+    <item>
+      <title>Knockout.js External View</title>
+      <link>/blog/knockout.js-external-view/</link>
+      <pubDate>Mon, 12 Dec 2011 14:04:00 +0000</pubDate>
+      
+      <guid>/blog/knockout.js-external-view/</guid>
+      <description>Source:&amp;nbsp;https://github.com/wookets/koexternalview
+The project is a very simple single page knockout application with hash based navigation and the ability to read in external partial html views.
+Originally taken from&amp;hellip;
+https://github.com/thelinuxlich/knockout.spi</description>
+    </item>
+    
+    <item>
+      <title>Less (CSS) Grid Example</title>
+      <link>/blog/less-css-grid-example/</link>
+      <pubDate>Sun, 11 Dec 2011 10:48:00 +0000</pubDate>
+      
+      <guid>/blog/less-css-grid-example/</guid>
+      <description>One of the main reasons for using a language like Less is to move away from using &amp;lsquo;span10&amp;rsquo; or &amp;lsquo;col10&amp;rsquo; when using a grid based html layout for your webpage.
+After all&amp;hellip;
+&amp;lt;div class=&amp;ldquo;row&amp;rdquo;&amp;gt;
+&amp;nbsp; &amp;lt;div class=&amp;ldquo;span10&amp;rdquo;&amp;gt;Main Content&amp;lt;/div&amp;gt;
+&amp;nbsp; &amp;lt;div class=&amp;ldquo;span4&amp;rdquo;&amp;gt;Side Content&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+Doesn&amp;rsquo;t seem right&amp;hellip; But&amp;hellip;
+&amp;lt;div class=&amp;ldquo;content&amp;rdquo;&amp;gt;
+&amp;nbsp; &amp;lt;div class=&amp;ldquo;main&amp;rdquo;&amp;gt;Main Content&amp;lt;/div&amp;gt;
+&amp;nbsp; &amp;lt;div class=&amp;ldquo;side&amp;rdquo;&amp;gt;Side Content&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+Seems a little better&amp;hellip;
+The problem is, how do we apply .span10 to .</description>
+    </item>
+    
+    <item>
+      <title>Static vs Dynamic Groovy</title>
+      <link>/blog/static-vs-dynamic-groovy/</link>
+      <pubDate>Sat, 03 Dec 2011 22:46:00 +0000</pubDate>
+      
+      <guid>/blog/static-vs-dynamic-groovy/</guid>
+      <description>If you try groovy++, the results do bare out. And it will add static checking to your code inside of eclipse, which could be argued is more important than adding more servers.
+However, it looks like groovy is adding first class support for the functionality in 2.0. Though it seems static checking will be in first and the performance improvements will happen later.
+See the reference links below for the relevant blog posts.</description>
+    </item>
+    
+    <item>
+      <title>Spring AOP Method Profiler</title>
+      <link>/blog/spring-aop-method-profiler/</link>
+      <pubDate>Sat, 03 Dec 2011 22:14:00 +0000</pubDate>
+      
+      <guid>/blog/spring-aop-method-profiler/</guid>
+      <description>This is a poor man&amp;rsquo;s application profiler. Note, that this profiler is going to be limited, since it is running inside the application, but also nice that it is running inside the application. Anyway, I find it helpful to measure individual service calls against other service calls. One could even add a limit into this method, if it takes longer than x, send me an email because something is wrong&amp;hellip; Though, I&amp;rsquo;m pretty sure this code is not to great for production builds.</description>
+    </item>
+    
+    <item>
+      <title>SAML 2.0 using Groovy and Spring (part 2)</title>
+      <link>/blog/saml-2.0-using-groovy-and-spring-part-2/</link>
+      <pubDate>Tue, 22 Nov 2011 21:29:00 +0000</pubDate>
+      
+      <guid>/blog/saml-2.0-using-groovy-and-spring-part-2/</guid>
+      <description>In part 1, I showed you how to write a Controller and a Service which creates the AuthnRequest and sends a redirect.
+I should mention that Controller is entirely derived from Spring&amp;rsquo;s MVC use of the word, but we in fact are not using it to handle or communicate with a view, just for the amazingly simple HTTP servlet like features.
+Now, in part 2, we will add to the Controller and Service classes methods which make handling the incoming SAML Assertion HTTP POST cake.</description>
+    </item>
+    
+    <item>
+      <title>SAML 2.0 using Groovy and Spring (part 1)</title>
+      <link>/blog/saml-2.0-using-groovy-and-spring-part-1/</link>
+      <pubDate>Tue, 22 Nov 2011 13:07:00 +0000</pubDate>
+      
+      <guid>/blog/saml-2.0-using-groovy-and-spring-part-1/</guid>
+      <description>Overview
+Recently I have had to do a small SAML 2.0 integration project for one of our clients to enable single sign on. Here are some thoughts on the issue.
+Saml 2.0 is pretty easy
+Much can be said about SOAP and insane and inane web service API&amp;rsquo;s, but SAML 2.0 is pretty straight forward. The basic flow can be summed;
+System A -&amp;nbsp;Identity&amp;nbsp;holder
+This system is the authority of authentication for our users.</description>
+    </item>
+    
+    <item>
+      <title>Spring 3.1 Environment Profile</title>
+      <link>/blog/spring-3.1-environment-profile/</link>
+      <pubDate>Tue, 08 Nov 2011 09:24:00 +0000</pubDate>
+      
+      <guid>/blog/spring-3.1-environment-profile/</guid>
+      <description>The most useful addition to Spring 3.1 I&amp;rsquo;ve found is support for environments (called Profiles).
+Here is the official post on this topic.
+http://blog.springsource.com/2011/02/11/spring-framework-3-1-m1-released/
+Profiles allow you to add / remove features / settings of your application based on the environment it is actually running in.
+Example:
+&amp;lt;beans profile=&amp;ldquo;beta&amp;rdquo;&amp;gt;
+&amp;lt;bean id=&amp;ldquo;appProperties&amp;rdquo; class=&amp;ldquo;wookets.bootstrap.AppProperties&amp;rdquo;&amp;gt;
+&amp;lt;property name=&amp;ldquo;someprop&amp;rdquo; value=&amp;ldquo;CHEESE&amp;rdquo;/&amp;gt;
+&amp;lt;/bean&amp;gt;
+&amp;lt;/beans&amp;gt;
+&amp;lt;beans profile=&amp;ldquo;local&amp;rdquo;&amp;gt;
+&amp;lt;bean id=&amp;ldquo;appProperties&amp;rdquo; class=&amp;ldquo;wookets.bootstrap.AppProperties&amp;rdquo;&amp;gt;
+&amp;lt;property name=&amp;ldquo;someprop&amp;rdquo; value=&amp;ldquo;WAFFLES&amp;rdquo;/&amp;gt;
+&amp;lt;/bean&amp;gt;
+&amp;lt;/beans&amp;gt;
+
+If we are running the application on our beta server, we&amp;rsquo;ll get CHEESE.</description>
+    </item>
+    
+    <item>
+      <title>A Spring Controller Invoker Service w/ Groovy Named Params</title>
+      <link>/blog/a-spring-controller-invoker-service-w-groovy-named-params/</link>
+      <pubDate>Sun, 06 Nov 2011 20:53:00 +0000</pubDate>
+      
+      <guid>/blog/a-spring-controller-invoker-service-w-groovy-named-params/</guid>
+      <description>I&amp;rsquo;m attempting to use the invoker pattern with a spring controller. For instance&amp;hellip;
+/app/invoke/hamburger/makeme
+Navigating to this URL with either a GET or a POST should do the following&amp;hellip;
+1. Look up and get a service called &amp;lsquo;HamburgerService&amp;rsquo; from the spring context.2. Invoke a method on our service bean called &amp;lsquo;makeme&amp;rsquo;3. If any params are passed in, pass them in as arguments to the makeme method.Example Groovy code:
+HamburgerService.groovy
+class HamburgerService {</description>
+    </item>
+    
+    <item>
+      <title>Spring MVC letting tomcat resolve files</title>
+      <link>/blog/spring-mvc-letting-tomcat-resolve-files/</link>
+      <pubDate>Sat, 05 Nov 2011 21:07:00 +0000</pubDate>
+      
+      <guid>/blog/spring-mvc-letting-tomcat-resolve-files/</guid>
+      <description>Finally found what I was looking for after much searching&amp;hellip;
+In your web.xml:
+&amp;nbsp; &amp;lt;!&amp;ndash; Handles all requests into the application &amp;ndash;&amp;gt;&amp;nbsp; &amp;lt;servlet&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;servlet-name&amp;gt;spring&amp;lt;/servlet-name&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt;/servlet-class&amp;gt;&amp;nbsp; &amp;lt;/servlet&amp;gt;&amp;nbsp; &amp;lt;servlet-mapping&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;servlet-name&amp;gt;spring&amp;lt;/servlet-name&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&amp;nbsp; &amp;lt;/servlet-mapping&amp;gt;The problem:&amp;nbsp;Spring&amp;rsquo;s dispatcher servlet handles ALL requests&amp;hellip; Yes, you get nice clean urls to your controller request mappings, but simple things like /index.html or / or /someimage.jpg fall apart. Spring attempts to run those requests through it&amp;rsquo;s own view resolvers, when you most likely want to have the default tomcat servlet handle it.</description>
+    </item>
+    
+    <item>
+      <title>Adobe Muse Pre-Release Tinkering</title>
+      <link>/blog/adobe-muse-pre-release-tinkering/</link>
+      <pubDate>Sun, 30 Oct 2011 18:10:00 +0000</pubDate>
+      
+      <guid>/blog/adobe-muse-pre-release-tinkering/</guid>
+      <description>Played around with Adobe Muse Pre-release 3 today.
+Result:&amp;nbsp;http://wookets.com/code/adobe_muse/webarch/
+Pretty crummy. The site that I put together that is&amp;hellip;
+Muse is pretty limited on options, which makes it pretty straight forward to use, but I&amp;rsquo;m leery of making anything professional with such a tool. It does the same thing as dreamweaver and spits out code at the end and if you need a feature which the Muse tool doesn&amp;rsquo;t have&amp;hellip; Pretty much too bad, because changing generated code will never be fun.</description>
+    </item>
+    
+    <item>
+      <title>Apache Ivy Private Repository</title>
+      <link>/blog/apache-ivy-private-repository/</link>
+      <pubDate>Mon, 17 Oct 2011 22:28:00 +0000</pubDate>
+      
+      <guid>/blog/apache-ivy-private-repository/</guid>
+      <description>If you want your open source project to succeed, write good documentation&amp;hellip; or just have a bunch of people blog about it and do it for you.
+I have recently been playing around with Apache Ivy and trying to get it to work. Yes, I&amp;rsquo;ve looked at Maven. To be honest, I don&amp;rsquo;t want / need a build system. Right click export is how I build and while that my seem crude to you, I really only release every two or so weeks.</description>
+    </item>
+    
+    <item>
+      <title>Haml to Html Converter (sans Rails Project)</title>
+      <link>/blog/haml-to-html-converter-sans-rails-project/</link>
+      <pubDate>Sat, 17 Sep 2011 12:59:00 +0000</pubDate>
+      
+      <guid>/blog/haml-to-html-converter-sans-rails-project/</guid>
+      <description>The simple fact is&amp;hellip;
+!!! 5%html&amp;nbsp; %head&amp;nbsp; &amp;nbsp; %title Awesome Sauce Website&amp;nbsp; %body&amp;nbsp; &amp;nbsp; %h1 Do you like sauce?&amp;nbsp; &amp;nbsp; -# let me answer the question&amp;nbsp; &amp;nbsp; .answer&amp;nbsp; Red or white?is better than&amp;hellip;
+&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;nbsp; &amp;lt;head&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;title&amp;gt;Awesome Sauce Website&amp;lt;/title&amp;gt;&amp;nbsp; &amp;lt;/head&amp;gt;&amp;nbsp; &amp;lt;body&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;h1&amp;gt;Do you like sauce?&amp;lt;/h1&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;div class=&amp;lsquo;answer&amp;rsquo;&amp;gt;Red or white?&amp;lt;/div&amp;gt;&amp;nbsp; &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+The above is Haml followed by HTML. While it&amp;rsquo;s true that most decent IDEs and Text Editors will support code completion of the tags, xml is verbose and sloppy by today&amp;rsquo;s standards.</description>
+    </item>
+    
+    <item>
+      <title>Groovy 1.8 Logging</title>
+      <link>/blog/groovy-1.8-logging/</link>
+      <pubDate>Sun, 04 Sep 2011 09:10:00 +0000</pubDate>
+      
+      <guid>/blog/groovy-1.8-logging/</guid>
+      <description>Finally, logging that makes some sense&amp;hellip;
+In Groovy 1.8 they added a very nifty new way to do logging. But first, let&amp;rsquo;s revisit how we used to do logging.
+&amp;lt;code&amp;gt;&amp;nbsp; private static final Logger log = Logger.getLogger(CrudService.class);&amp;nbsp; &amp;nbsp;if(log.isDebugEnabled()) {&amp;nbsp; &amp;nbsp; &amp;nbsp; String debugMsg = &amp;ldquo;INCOMING:: Create: &amp;ldquo; + resource.getClass() + &amp;ldquo;::&amp;rdquo; + resource.getId();&amp;nbsp; &amp;nbsp; &amp;nbsp; log.debug(debugMsg);&amp;nbsp; &amp;nbsp; }&amp;lt;/code&amp;gt;
+The main problem with the above piece of code is the inane amount of verbosity used to do something that should be really really really simple.</description>
+    </item>
+    
+    <item>
+      <title>Disque Commenting</title>
+      <link>/blog/disque-commenting/</link>
+      <pubDate>Mon, 22 Aug 2011 22:54:00 +0000</pubDate>
+      
+      <guid>/blog/disque-commenting/</guid>
+      <description>Added disque commenting system to this blog...
+Was actually a little too easy to add... You actually don&#39;t have to do anything... Just a few mouse clicks and put a bite or two of some soggy waffles down your throat...
+www.disqus.com </description>
+    </item>
+    
+    <item>
+      <title>Using S3 to host your website</title>
+      <link>/blog/using-s3-to-host-your-website/</link>
+      <pubDate>Mon, 22 Aug 2011 22:26:00 +0000</pubDate>
+      
+      <guid>/blog/using-s3-to-host-your-website/</guid>
+      <description>In the process (nar shall be completed) of plumping wookets.com (and link wookets.com) to amazon&amp;rsquo;s s3 webhosting bucket featurette.
+Standard references apply. This means go look at the reference link for the step-by-step. Time to go watch Judge Dredd. Holy stone sly, are they making a remake? http://www.imdb.com/title/tt1343727/
+Update: handling www.
+www.wookets.com (or your own www.website.com) can be accommodated by making another bucket (ie www.wookets.com) and then using a simple html redirect.</description>
+    </item>
+    
+    <item>
+      <title>A flex [Model] tag</title>
+      <link>/blog/a-flex-model-tag/</link>
+      <pubDate>Mon, 15 Aug 2011 14:55:00 +0000</pubDate>
+      
+      <guid>/blog/a-flex-model-tag/</guid>
+      <description>If you are unfamiliar with the Presentation Model design pattern (MVVM) or declarative UI, please google and / or read the link below.
+http://swizframework.jira.com/wiki/display/SWIZ/Presentation+Model
+http://en.wikipedia.org/wiki/Model_View_ViewModel
+Now, what I&amp;rsquo;ve done is taken this design model and made a tag for Swiz flex applications.
+http://swizframework.org/
+Reasons:
+1. I was sick of declaring prototype beans.
+2. [Model] is more clear than [Inject]&amp;hellip; In terms of making sure people are following the pattern.
+3. I did not like (but the tag does support) the idea of changing a UI state in the Model code.</description>
+    </item>
+    
+    <item>
+      <title>MVVM in javascript html</title>
+      <link>/blog/mvvm-in-javascript-html/</link>
+      <pubDate>Fri, 05 Aug 2011 13:37:00 +0000</pubDate>
+      
+      <guid>/blog/mvvm-in-javascript-html/</guid>
+      <description>http://knockoutjs.com/
+Seems to be what I&amp;rsquo;ve been looking for&amp;hellip; That is, a framework that supports MVVM (Model View View Model) pattern (aka Presentation Pattern)&amp;hellip; For moving from flex to html5 / javascript.</description>
+    </item>
+    
+    <item>
+      <title>Spring ContentNegotiatingViewResolver ExceptionHandler mismatch fix</title>
+      <link>/blog/spring-contentnegotiatingviewresolver-exceptionhandler-mismatch-fix/</link>
+      <pubDate>Fri, 05 Aug 2011 13:33:00 +0000</pubDate>
+      
+      <guid>/blog/spring-contentnegotiatingviewresolver-exceptionhandler-mismatch-fix/</guid>
+      <description>The org.springframework.web.servlet.view.ContentNegotiatingViewResolver let&#39;s you map a response from your controller and have it auto formatted without a nary of hint in the actual code. However, exception handling of the controller does not seem to follow this&amp;nbsp;ideology. Maybe this will be fixed in a future version (I hope) or is already fixed in a newer version (don&#39;t feel like upgrading libs atm). For context, I&#39;m using Spring 3.0.5-Release.&amp;nbsp;Here is how my exception handler should look and act.</description>
+    </item>
+    
+    <item>
+      <title>ifnotset function in php</title>
+      <link>/blog/ifnotset-function-in-php/</link>
+      <pubDate>Wed, 03 Aug 2011 17:22:00 +0000</pubDate>
+      
+      <guid>/blog/ifnotset-function-in-php/</guid>
+      <description>Here is a simple php function that acts like a ternary if-else operator, but is a bit shorter. I believe groovy has something similar, that is; native support for what I&amp;rsquo;m trying to do&amp;hellip;
+The crux:
+// old school
+if(var1 == null) {
+&amp;nbsp; var1 = var3;
+} else { // this else is really&amp;nbsp;unnecessary
+&amp;nbsp; var1 = var1;
+}
+// modified above example
+if(var1 == null) var1 = var3;</description>
+    </item>
+    
+    <item>
+      <title>Leave a feature out of your next project</title>
+      <link>/blog/leave-a-feature-out-of-your-next-project/</link>
+      <pubDate>Wed, 03 Aug 2011 10:32:00 +0000</pubDate>
+      
+      <guid>/blog/leave-a-feature-out-of-your-next-project/</guid>
+      <description>Apple, undisputed masters of marketing and sales, do one thing extremely well. Yes, great showmanship, great ecosystem (we&amp;rsquo;ll take care of you) and great product quality are part of their strategy. However, less talked about is how they remove features. How can you ship a modern desktop pc without a DVD drive? What about the lack of even batting an eye at bluray? Hdmi out? VGA out? Dvi out? All are out or never made it on a single laptop.</description>
+    </item>
+    
+    <item>
+      <title>Flash Builder &#39;Add Project&#39; not working (with work around)</title>
+      <link>/blog/flash-builder-add-project-not-working-with-work-around/</link>
+      <pubDate>Mon, 01 Aug 2011 11:32:00 +0000</pubDate>
+      
+      <guid>/blog/flash-builder-add-project-not-working-with-work-around/</guid>
+      <description>Update:&amp;nbsp;Checking out the project under a different name fixed things... What?!? I hate eclipse... &amp;nbsp;The issue:&amp;nbsp;Orange question mark&#39;s in the gutter of flash builder 4.5 when looking at import statements or class references of an &#39;Added library&#39;.&amp;nbsp;I&#39;m not even sure this is an OSX issue or what is going on, but flash builder refuses to compile in (for the source editor at least) the library. Below is what your build path should look like when referencing a project.</description>
+    </item>
+    
+    <item>
+      <title>Installing Subclipse / SVN on Lion</title>
+      <link>/blog/installing-subclipse--svn-on-lion/</link>
+      <pubDate>Thu, 28 Jul 2011 09:37:00 +0000</pubDate>
+      
+      <guid>/blog/installing-subclipse--svn-on-lion/</guid>
+      <description>Useful if you just got a new mac with Lion installed and need to get subclipse up and running. Collabnet hasn&amp;rsquo;t updated the SVN binaries to 10.7 yet. So a work around.
+&amp;ldquo;Open this file : sudo pico /System/Library/Core Services/SystemVersi on.plist change version to 10.6 wherever you see 10.7 install subversion change back to 10.7&amp;rdquo; (as taken from below)
+Reference:
+http://stackoverflow.com/questions/6791989/subclipse-in-mac-os-lion</description>
+    </item>
+    
+    <item>
+      <title>Flex Navigation Demo</title>
+      <link>/blog/flex-navigation-demo/</link>
+      <pubDate>Thu, 21 Jul 2011 19:43:00 +0000</pubDate>
+      
+      <guid>/blog/flex-navigation-demo/</guid>
+      <description>Demo and Source (right-click):
+http://wookets.com/code/flex/NaviDemo/FlexNaviDemo.html
+A very simple navigation demo.
+The crux is&amp;hellip; Define your views at the root of the application. Then use a contextual class to update the root view a generic &amp;lsquo;goto&amp;rsquo; function. This is done view the static Navi class, but could certainly be done using IoC or a Singleton type pattern. FYI, this is using states, but one could also use a viewstack (there is a flex 4 version somewhere around here)&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>jQuery raindrops (text)</title>
+      <link>/blog/jquery-raindrops-text/</link>
+      <pubDate>Mon, 11 Jul 2011 14:14:00 +0000</pubDate>
+      
+      <guid>/blog/jquery-raindrops-text/</guid>
+      <description>I made a raindrop type effect for my website. Obviously, one could tweak it to get it closer to the desired effect one would be looking to achieve, but&amp;hellip; Website: http://wookets.com/
+Archive: http://wookets.com/archive/wookets-com-july2011/
+Everything is javascript, so you can right click and view the source. I was having some major problems, but breaking everything out into distinct functions seems to have alleviated those&amp;hellip; Notably the generating and the adding of droplets and the dropping.</description>
+    </item>
+    
+    <item>
+      <title>Flex 4 Composite Component (templating)</title>
+      <link>/blog/flex-4-composite-component-templating/</link>
+      <pubDate>Thu, 23 Jun 2011 12:01:00 +0000</pubDate>
+      
+      <guid>/blog/flex-4-composite-component-templating/</guid>
+      <description>Sorry, no example, just some quick code&amp;hellip;
+Here is how you use the component which is going to facade our complexity&amp;hellip;
+&amp;lt;components:FormItem label=&amp;quot;Name:&amp;quot; help=&amp;quot;e.g. Increase Revenue&amp;quot;&amp;gt;
+&amp;lt;s:TextInput text=&amp;quot;@{pm.selectedGoal.name}&amp;quot; maxChars=&amp;quot;160&amp;quot; width=&amp;quot;100%&amp;quot;/&amp;gt;
+&amp;lt;/components:FormItem&amp;gt;
+
+And what is happening behind the scenes&amp;hellip;
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;s:Group xmlns:fx=&amp;quot;http://ns.adobe.com/mxml/2009&amp;quot; xmlns:s=&amp;quot;library://ns.adobe.com/flex/spark&amp;quot;
+xmlns:mx=&amp;quot;library://ns.adobe.com/flex/mx&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;
+&amp;lt;fx:Declarations&amp;gt;
+&amp;lt;fx:String id=&amp;quot;label&amp;quot;/&amp;gt;
+&amp;lt;fx:String id=&amp;quot;help&amp;quot;/&amp;gt;
+&amp;lt;/fx:Declarations&amp;gt;
+&amp;lt;fx:Script&amp;gt;
+&amp;lt;![CDATA[
+public function set content(value:Array):void {
+contentGroup.mxmlContent = value;
+}
+]]&amp;gt;
+&amp;lt;/fx:Script&amp;gt;
+&amp;lt;s:layout&amp;gt;
+&amp;lt;s:VerticalLayout paddingBottom=&amp;quot;15&amp;quot;/&amp;gt;
+&amp;lt;/s:layout&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Presentation Model Flex and Swiz Framework</title>
+      <link>/blog/presentation-model-flex-and-swiz-framework/</link>
+      <pubDate>Wed, 22 Jun 2011 17:53:00 +0000</pubDate>
+      
+      <guid>/blog/presentation-model-flex-and-swiz-framework/</guid>
+      <description>The importance of using a presentation model for keeping your flex pages clean of code and your backend methods reactionary.
+Here is an example of a typical flex file.
+&amp;lt;?xml version=&amp;ldquo;1.0&amp;rdquo; encoding=&amp;ldquo;utf-8&amp;rdquo;?&amp;gt;
+&amp;lt;af:AdminResourceBase xmlns:mx=&amp;ldquo;http://www.adobe.com/2006/mxml&amp;quot; xmlns:appcore=&amp;ldquo;http://www.wookets.com/flex&amp;quot;
+creationComplete=&amp;ldquo;setup()&amp;rdquo;
+clipContent=&amp;ldquo;false&amp;rdquo; label=&amp;ldquo;Add&amp;rdquo;&amp;gt;
+&amp;lt;!&amp;ndash; control &amp;ndash;&amp;gt;
+&amp;lt;mx:Script&amp;gt;
+&amp;lt;![CDATA[
+import com.wookets.query.dto.Find;
+import appcore.query.Tide;
+import com.wookets.core.model.User;
+import com.wookets.track.model.AppAward;
+import mx.collections.ArrayCollection;
+private function setup():void {
+loadUsers();
+}
+public override function beforeSave():void {
+b_add.enabled = false;
+b_add.label = &amp;ldquo;adding&amp;hellip;&amp;rdquo;;</description>
+    </item>
+    
+    <item>
+      <title>Hibernate - null id in entry (don&#39;t flush the Session after an exception occurs)</title>
+      <link>/blog/hibernate---null-id-in-entry-dont-flush-the-session-after-an-exception-occurs/</link>
+      <pubDate>Mon, 13 Jun 2011 14:27:00 +0000</pubDate>
+      
+      <guid>/blog/hibernate---null-id-in-entry-dont-flush-the-session-after-an-exception-occurs/</guid>
+      <description>Exception:
+null id in entry (don&amp;rsquo;t flush the Session after an exception occurs)
+I was getting the above exception in spring hibernate junit jpa type test when trying to persist an entity. You actually get the exception after the entity is &amp;lsquo;persisted&amp;rsquo;. The error is thrown because of a validation type error with the database table (property not set when DB needs it to be set or something), but hibernate keeps chugging along and holds the object in session in a weird quasi not-persistent, but still in session state.</description>
+    </item>
+    
+    <item>
+      <title>Blog Syntax Highlighter</title>
+      <link>/blog/blog-syntax-highlighter/</link>
+      <pubDate>Tue, 31 May 2011 15:21:00 +0000</pubDate>
+      
+      <guid>/blog/blog-syntax-highlighter/</guid>
+      <description>Finally unlazy enough to get a good syntax highlighter&amp;hellip;
+Code:&amp;nbsp;http://alexgorbatchev.com/SyntaxHighlighter/
+Instructions:&amp;nbsp;http://www.cyberack.com/2007/07/adding-syntax-highlighter-to-blogger.html
+Escape L-trims:&amp;nbsp;http://accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php
+&amp;lt;!&amp;ndash; oxm integration &amp;ndash;&amp;gt;
+&amp;lt;bean id=&amp;ldquo;objectXmlMarshaller&amp;rdquo; class=&amp;ldquo;org.springframework.oxm.xstream.XStreamMarshaller&amp;rdquo;/&amp;gt;
+
+package com.wookets.hibernate;
+import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
+import org.hibernate.HibernateException;
+import org.hibernate.usertype.UserType;
+import org.springframework.oxm.xstream.XStreamMarshaller;
+import org.springframework.util.ObjectUtils;
+import com.wookets.spring.ServiceLocator;
+public class XmlType implements UserType {
+private static final int[] SQL_TYPES = { Types.CLOB };
+@Override
+public int[] sqlTypes() {
+return SQL_TYPES;
+}
+@Override
+public Class returnedClass() {</description>
+    </item>
+    
+  </channel>
+</rss>

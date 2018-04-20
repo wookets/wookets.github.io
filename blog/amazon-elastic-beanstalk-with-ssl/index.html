@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="generator" content="Hugo 0.37.1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Amazon Elastic Beanstalk with SSL </title>
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="map[name:Sean Wesenberg uri:https://plus.google.com/111523202047342274226]">
+
+
+  <meta property="og:title" content="Amazon Elastic Beanstalk with SSL" />
+<meta property="og:description" content="When you deploy your first elastic beanstalk application the URL will similar to&hellip;
+http://myapp-cname.elasticbeanstalk.com
+Where &lsquo;myapp-cname&rsquo; is the assigned cname when you first launch your environment.&nbsp;
+What if we want to resolve our own domain, e.g.&nbsp;
+http://myapp.yourdomain.com
+This is pretty straight forward (assuming some background in working with cnames)&hellip;&nbsp;
+CNAME
+1. Go into the Amazon AWS console and locate the elastic load balancer. This is generally found under EC2 -&gt; load balancers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/amazon-elastic-beanstalk-with-ssl/" />
+
+
+
+<meta property="article:published_time" content="2011-11-11T08:52:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2011-11-11T08:52:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="/blog/amazon-elastic-beanstalk-with-ssl/">  
+
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAYAAACGVs+MAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAABKhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICAgICAgICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDx0aWZmOkNvbXByZXNzaW9uPjU8L3RpZmY6Q29tcHJlc3Npb24+CiAgICAgICAgIDx0aWZmOlhSZXNvbHV0aW9uPjcyPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjMyPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6SW1hZ2VVbmlxdWVJRD5kNmFiMzFhMzI1MTVhMzhlMDAwMDAwMDAwMDAwMDAwMDwvZXhpZjpJbWFnZVVuaXF1ZUlEPgogICAgICAgICA8ZXhpZjpDb2xvclNwYWNlPjE8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">
+
+
+  <link href="/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/css/master.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.demo.css" rel="stylesheet" type="text/css">
+
+ <link href="/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">Wookets Wove</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">Wookets Wove</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/blog/" >Blog</a></li>
+    
+    <li><a href="/docs/" >Docs</a></li>
+    
+    <li><a href="/faq/" >Faq</a></li>
+    
+    <li><a href="/software/" >Software</a></li>
+    
+    <li><a href="/writing/" >Writing</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+<div class="push-center" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="Amazon Elastic Beanstalk with SSL">
+<meta itemprop="description" content="When you deploy your first elastic beanstalk application the URL will similar to&hellip;
+http://myapp-cname.elasticbeanstalk.com
+Where &lsquo;myapp-cname&rsquo; is the assigned cname when you first launch your environment.&nbsp;
+What if we want to resolve our own domain, e.g.&nbsp;
+http://myapp.yourdomain.com
+This is pretty straight forward (assuming some background in working with cnames)&hellip;&nbsp;
+CNAME
+1. Go into the Amazon AWS console and locate the elastic load balancer. This is generally found under EC2 -&gt; load balancers.">
+
+
+<meta itemprop="datePublished" content="2011-11-11T08:52:00&#43;00:00" />
+<meta itemprop="dateModified" content="2011-11-11T08:52:00&#43;00:00" />
+<meta itemprop="wordCount" content="427">
+
+
+
+<meta itemprop="keywords" content="Architecture," />
+
+<div id="hero">
+    <h1 itemprop="headline">  Amazon Elastic Beanstalk with SSL</h1>
+    
+	<time class="post-time"><span class="icon">
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+</span>
+
+<span class="icon">
+ <i class="fa fa-pencil" aria-hidden="true"></i>
+</span>
+
+  Published: <time datetime="2011-11-11T08:52:00&#43;00:00">11 Nov, 2011</time>
+
+</time>
+</div>
+<div id="post-box">
+<div id="post" itemprop="articleBody">
+    
+    <p>When you deploy your first elastic beanstalk application the URL will similar to&hellip;<br /><br /><a href="http://myapp-cname.elasticbeanstalk.com">http://myapp-cname.elasticbeanstalk.com</a><br /><br /><div>Where &lsquo;myapp-cname&rsquo; is the assigned cname when you first launch your environment.&nbsp;</div><div><br /></div><div>What if we want to resolve our own domain, e.g.&nbsp;</div><div><br /></div><div><a href="http://myapp.yourdomain.com">http://myapp.yourdomain.com</a></div><div><br /></div><div>This is pretty straight forward (assuming some background in working with cnames)&hellip;&nbsp;</div><div><br /></div><div><b>CNAME</b></div><div><br /></div><div>1. Go into the Amazon AWS console and locate the elastic load balancer. This is generally found under EC2 -&gt; load balancers.&nbsp;</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="https://img.skitch.com/20111111-tjx6yxat8u7yi6y2n1j3ufrpjb.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="191" src="https://img.skitch.com/20111111-tjx6yxat8u7yi6y2n1j3ufrpjb.jpg" width="320" /></a></div><div><br /></div><div><br /></div><div>2. Take the DNS name of the load balancer. This will be your cname record on your domain host.&nbsp;</div><div><br /></div><div>Example:&nbsp;</div><div><br /></div><div>alias: myapp.yourdomain.com</div><div>cname: myapp-cname.elasticbeanstalk.com</div><div><br /></div><div><br /></div><div><b>Adding SSL&nbsp;</b></div><div><br /></div><div>SSL (HTTPS) is a little more tricky.&nbsp;</div><div><br /></div><div>1. You need to create a certificate and have it signed by an authority. This steps is far beyond this post, but if you google or look in Amazon&rsquo;s docs, they&rsquo;ll help you out.&nbsp;</div><div><br /></div><div>2. Once you have your cert and your private key, you need to upload those to IAM. IAM is Amazon&rsquo;s&nbsp;Identity&nbsp;and Access Management cloud service. This requires some command line work, as the AWS console does not currently support any way to upload this&hellip;&nbsp;</div><div><br /></div><div>See&hellip;&nbsp;<a href="http://docs.amazonwebservices.com/IAM/latest/UserGuide/index.html?ManagingServerCerts.html">http://docs.amazonwebservices.com/IAM/latest/UserGuide/index.html?ManagingServerCerts.html</a></div><div><br /></div><div>3. Now, you need to change your load balancer config on your elastic beanstalk environment to point to this certificate. This requires enabling https and setting the aws certificate id on your elastic beanstalk load balancer config.</div><div><br /></div><div>See&hellip;&nbsp;<a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?using-features.managing.elb.html">http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?using-features.managing.elb.html</a></div><div><br /></div><div>4. Then, assuming you did the above (add the cname for http) everything should work.&nbsp;</div><div><br /></div><div><b>Things to note</b></div><div><br /></div><div>The load balancer is doing the SSL termination and handling the overhead and processing associated with that&hellip; That&rsquo;s why we had to upload it and point the cname to the balancer. Your elastic beanstalk environment (the actual server) doesn&rsquo;t do any SSL stuff, which is nice, because it means more CPU for your apps.&nbsp;</div><div><br /></div><div>There is an issue with root type cnames. e.g. mydomain.com (instead of www.mydomain.com)&hellip; but there is a work around by setting up an Amazon Route 53 alias.&nbsp;</div><div><br /></div><div>In case you are wondering, for each environment, you need one sub-domain. Because, we are pointing to the load balancer and every elastic beanstalk environment creates a new load balancer. Maybe one day Amazon will add a routing cloud service, so you could point to a load balancer, which points to other load balancers, which point to your apps&hellip; Thus, you could in theory have one subdomain and use a path variable to do the routing through the system. But, that&rsquo;s a bit more complicated than we need to make things&hellip; (though it would be nice not to muck with DNS records as much)</div><div><br /></div><div><br /></div><div><br /></div><div><b>Resources</b></div><div><br /></div><div><a href="http://docs.amazonwebservices.com/Route53/latest/DeveloperGuide/index.html?HowToAliasRRS.html">http://docs.amazonwebservices.com/Route53/latest/DeveloperGuide/index.html?HowToAliasRRS.html</a></div><div><br /></div><div><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?using-features.managing.elb.html">http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?using-features.managing.elb.html</a></div><div><br /></div><div><a href="http://docs.amazonwebservices.com/ElasticLoadBalancing/latest/DeveloperGuide/index.html?using-domain-names-with-elb.html">http://docs.amazonwebservices.com/ElasticLoadBalancing/latest/DeveloperGuide/index.html?using-domain-names-with-elb.html</a></div></p>
+
+
+</div>
+
+    <div class="">
+        <p>
+  Published
+  
+    
+      by <span itemprop="author">map[name:Sean Wesenberg uri:https://plus.google.com/111523202047342274226]</span>
+    
+  
+  <time datetime="2011-11-11T08:52:00&#43;00:00">
+    11 Nov, 2011
+  </time>
+  
+  
+    and tagged <a href="/tags/architecture/">Architecture</a>
+  
+  using <span itemprop="wordCount">427</span> words.
+</p>
+
+        
+  
+
+
+
+  <aside>
+    <heade><strong>Related Content</strong></header>
+    <hr>
+    <ul>
+      
+      
+        <li><a href="/blog/the-three-levels-of-service/">The Three Levels of Service</a> &ndash; 5 minutes
+      
+        <li><a href="/blog/how-to-architect-your-next-web-app/">How to architect your next web app</a> &ndash; 3 minutes
+      
+        <li><a href="/blog/web-application-project-structure/">Web Application Project Structure</a> &ndash; 4 minutes
+      
+        <li><a href="/blog/amazon-sqs--sns-conceptual/">Amazon SQS &#43; SNS Conceptual</a> &ndash; 4 minutes
+      
+    </ul>
+  </aside>
+
+
+    </div>
+    
+    
+    
+</div>
+</div>
+</main>
+  <footer>   <footer id="footer">
+    <nav>
+      <ul>
+        <li><span>Wookets</span></li>
+        <li>
+          <a href="https://www.linkedin.com/in/wookets/">Connect on LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wookets">Give a shout on Twitter!</a>
+        </li>
+      </ul>
+    </nav>
+    <p>&copy; P.A.Wookets</p>
+  </footer> </footer>
+
+
+  <script src="/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/js/master.js" type="text/javascript">
+  </script>
+</body>
+
+</html>

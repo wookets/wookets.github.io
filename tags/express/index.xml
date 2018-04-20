@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Express on Wookets Wove</title>
+    <link>/tags/express/</link>
+    <description>Recent content in Express on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Jan 2013 15:51:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/express/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Error handling with Express 3.x</title>
+      <link>/blog/error-handling-with-express-3.x/</link>
+      <pubDate>Thu, 03 Jan 2013 15:51:00 +0000</pubDate>
+      
+      <guid>/blog/error-handling-with-express-3.x/</guid>
+      <description>Here is a quick middleware error handler. It essentially follows the express document to a T. It should however be noted that exceptions in the code will not be caught by this, since they will break the whole server. For that, you need to use node domains, which are new in 0.8.x and should be in an upcoming post. Loading&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Adding JSend methods to Express 3.x</title>
+      <link>/blog/adding-jsend-methods-to-express-3.x/</link>
+      <pubDate>Thu, 03 Jan 2013 10:32:00 +0000</pubDate>
+      
+      <guid>/blog/adding-jsend-methods-to-express-3.x/</guid>
+      <description>About JSendJSend is a specification for how web servers should respond when they respond via JSON. I find it useful mainly for quickly parsing error and success response differences. &amp;nbsp;One could use HTTP error codes (I don&amp;rsquo;t know why), but JSend is useful for keeping the client receiver simple and generic when handling responses.&amp;nbsp;
+JSend Success Example{status: &amp;ldquo;success&amp;rdquo;, data: &amp;ldquo;this could be a json object&amp;rdquo;}
+JSend Error Example{status: &amp;ldquo;error&amp;rdquo;, code: &amp;ldquo;InvalidParamter&amp;rdquo;, message: &amp;ldquo;Name is required.</description>
+    </item>
+    
+  </channel>
+</rss>

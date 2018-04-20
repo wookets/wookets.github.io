@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Wookets Wove</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Jan 2012 15:14:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Architecture</title>
+      <link>/tags/architecture/</link>
+      <pubDate>Sun, 29 Jan 2012 15:14:00 +0000</pubDate>
+      
+      <guid>/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>/tags/code/</link>
+      <pubDate>Wed, 22 Feb 2012 18:14:00 +0000</pubDate>
+      
+      <guid>/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Errors</title>
+      <link>/tags/errors/</link>
+      <pubDate>Thu, 03 Jan 2013 15:51:00 +0000</pubDate>
+      
+      <guid>/tags/errors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Express</title>
+      <link>/tags/express/</link>
+      <pubDate>Thu, 03 Jan 2013 15:51:00 +0000</pubDate>
+      
+      <guid>/tags/express/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jsend</title>
+      <link>/tags/jsend/</link>
+      <pubDate>Thu, 03 Jan 2013 10:32:00 +0000</pubDate>
+      
+      <guid>/tags/jsend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Literature</title>
+      <link>/tags/literature/</link>
+      <pubDate>Sun, 19 Jun 2011 17:45:00 +0000</pubDate>
+      
+      <guid>/tags/literature/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>/tags/music/</link>
+      <pubDate>Thu, 14 Jul 2011 19:00:00 +0000</pubDate>
+      
+      <guid>/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node</title>
+      <link>/tags/node/</link>
+      <pubDate>Thu, 03 Jan 2013 15:51:00 +0000</pubDate>
+      
+      <guid>/tags/node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thoughts</title>
+      <link>/tags/thoughts/</link>
+      <pubDate>Mon, 07 Nov 2011 13:42:00 +0000</pubDate>
+      
+      <guid>/tags/thoughts/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

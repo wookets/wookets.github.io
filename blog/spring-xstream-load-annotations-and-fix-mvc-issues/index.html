@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="generator" content="Hugo 0.37.1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Spring XStream Load Annotations and Fix MVC Issues </title>
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="map[name:Sean Wesenberg uri:https://plus.google.com/111523202047342274226]">
+
+
+  <meta property="og:title" content="Spring XStream Load Annotations and Fix MVC Issues" />
+<meta property="og:description" content="Wow. Covering the full gamut today. From Flex-Swiz-Event Order to Javascript-jQuery-Image Scaling to Java-Spring-Xml&nbsp;Marshalling.
+The problem I faced was this (http://forum.springsource.org/showthread.php?t=79963). Essentially, Spring MVC / XStream sometimes maps a returned object (see below) to an&nbsp;incoherent&nbsp;string of framework object binding instructions.
+The Spring MVC Service
+@Controller public class SessionService { @Autowired private ServerSessionContext serverSessionContext; @RequestMapping(value = &ldquo;/validatesession&rdquo;) public SessionValidationResponse validateSessionToken(@RequestParam String sessionToken) { SessionValidationResponse response = new SessionValidationResponse(); response.isValid = serverSessionContext.doesSessionExist(sessionToken); return response; } }" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/spring-xstream-load-annotations-and-fix-mvc-issues/" />
+
+
+
+<meta property="article:published_time" content="2011-05-02T14:51:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2011-05-02T14:51:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="/blog/spring-xstream-load-annotations-and-fix-mvc-issues/">  
+
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAYAAACGVs+MAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAABKhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICAgICAgICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDx0aWZmOkNvbXByZXNzaW9uPjU8L3RpZmY6Q29tcHJlc3Npb24+CiAgICAgICAgIDx0aWZmOlhSZXNvbHV0aW9uPjcyPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjMyPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6SW1hZ2VVbmlxdWVJRD5kNmFiMzFhMzI1MTVhMzhlMDAwMDAwMDAwMDAwMDAwMDwvZXhpZjpJbWFnZVVuaXF1ZUlEPgogICAgICAgICA8ZXhpZjpDb2xvclNwYWNlPjE8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">
+
+
+  <link href="/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/css/master.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.demo.css" rel="stylesheet" type="text/css">
+
+ <link href="/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">Wookets Wove</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">Wookets Wove</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/blog/" >Blog</a></li>
+    
+    <li><a href="/docs/" >Docs</a></li>
+    
+    <li><a href="/faq/" >Faq</a></li>
+    
+    <li><a href="/software/" >Software</a></li>
+    
+    <li><a href="/writing/" >Writing</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+<div class="push-center" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="Spring XStream Load Annotations and Fix MVC Issues">
+<meta itemprop="description" content="Wow. Covering the full gamut today. From Flex-Swiz-Event Order to Javascript-jQuery-Image Scaling to Java-Spring-Xml&nbsp;Marshalling.
+The problem I faced was this (http://forum.springsource.org/showthread.php?t=79963). Essentially, Spring MVC / XStream sometimes maps a returned object (see below) to an&nbsp;incoherent&nbsp;string of framework object binding instructions.
+The Spring MVC Service
+@Controller public class SessionService { @Autowired private ServerSessionContext serverSessionContext; @RequestMapping(value = &ldquo;/validatesession&rdquo;) public SessionValidationResponse validateSessionToken(@RequestParam String sessionToken) { SessionValidationResponse response = new SessionValidationResponse(); response.isValid = serverSessionContext.doesSessionExist(sessionToken); return response; } }">
+
+
+<meta itemprop="datePublished" content="2011-05-02T14:51:00&#43;00:00" />
+<meta itemprop="dateModified" content="2011-05-02T14:51:00&#43;00:00" />
+<meta itemprop="wordCount" content="506">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<div id="hero">
+    <h1 itemprop="headline">  Spring XStream Load Annotations and Fix MVC Issues</h1>
+    
+	<time class="post-time"><span class="icon">
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+</span>
+
+<span class="icon">
+ <i class="fa fa-pencil" aria-hidden="true"></i>
+</span>
+
+  Published: <time datetime="2011-05-02T14:51:00&#43;00:00">2 May, 2011</time>
+
+</time>
+</div>
+<div id="post-box">
+<div id="post" itemprop="articleBody">
+    
+    <p>Wow. Covering the full gamut today. From Flex-Swiz-Event Order to Javascript-jQuery-Image Scaling to Java-Spring-Xml&nbsp;Marshalling.<br /><br />The problem I faced was this (<a href="http://forum.springsource.org/showthread.php?t=79963">http://forum.springsource.org/showthread.php?t=79963</a>). Essentially, Spring MVC / XStream sometimes maps a returned object (see below) to an&nbsp;incoherent&nbsp;string of framework object binding instructions.<br /><br />The Spring MVC Service<br /><br /><pre style="background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;"> @Controller  <br /> public class SessionService {  <br />  @Autowired  <br />  private ServerSessionContext serverSessionContext;  <br />  @RequestMapping(value = &ldquo;/validatesession&rdquo;)  <br />  public SessionValidationResponse validateSessionToken(@RequestParam String sessionToken) {  <br />   SessionValidationResponse response = new SessionValidationResponse();  <br />   response.isValid = serverSessionContext.doesSessionExist(sessionToken);  <br />   return response;  <br />  }  <br /> }  <br /></code></pre><br />The actual returned object is nothing more than a simple POJO.<br /><br /><pre style="background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;"> package com.actifi.auth.dto;  <br /> import com.thoughtworks.xstream.annotations.XStreamAlias;  <br /> @XStreamAlias(&ldquo;sessionValidationResponse&rdquo;)  <br /> public class SessionValidationResponse {  <br />  public Boolean isValid = false;  <br /> }  <br /></code></pre><br />But, it would return some Binding&hellip;.<br /><br /><pre  style="font-family:arial;font-size:12px;border:1px dashed #CCCCCC;width:99%;height:auto;overflow:auto;background:#f0f0f0;padding:0px;color:#000000;text-align:left;line-height:20px;"><code style="color:#000000;word-wrap:normal;"> &lt;org.springframework.validation.BeanPropertyBindingResult&gt;  <br /> &lt;nestedPath/&gt;  <br /> &lt;nestedPathStack serialization=&ldquo;custom&rdquo;&gt;  <br /> &lt;unserializable-parents/&gt;  <br /> &lt;vector&gt;  <br /> &lt;default&gt;  <br /> &lt;capacityIncrement&gt;0&lt;/capacityIncrement&gt;  <br /> &lt;elementCount&gt;0&lt;/elementCount&gt;  <br /> thousands of lines omitted for brevity  <br /></code></pre><br /><br />The solution for fixing the problem is in the two reference links below. And&hellip; as they recommend&hellip; they want you to actually type class full names (package and all) into the spring config file. I like the way my current spring xml config looks&hellip;<br /><br /><pre style="background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;">  &lt;!&ndash; oxm integration &ndash;&gt;  <br />  &lt;bean id=&ldquo;objectXmlMarshaller&rdquo; class=&ldquo;org.springframework.oxm.xstream.XStreamMarshaller&rdquo;/&gt;  <br /></code></pre><br />So&hellip; here is a bootstrapper class and a scan class util to make things &lsquo;automagic&rsquo;.<br /><br />Generic scan helper class (requires spring framework)<br /><br /><pre style="background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;"> package com.wookets.bootstrap;  <br /> import java.util.ArrayList;  <br /> import java.util.List;  <br /> import org.springframework.beans.factory.config.BeanDefinition;  <br /> import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;  <br /> import org.springframework.util.ClassUtils;  <br /> /**  <br />  * This will scan the classpath for certain classes that you may want to register based on annotations  <br />  * or something similar&hellip; This uses ASM and spring stuff, so we know it is good.  <br />  *  <br />  * usage  <br />  *  <br />  *  final ComponentClassScanner scanner = new ComponentClassScanner();  <br />  *  scanner.addIncludeFilter(new AnnotationTypeFilter(DbRevision.class));  <br />  *  final List&lt;Class&lt;? extends Object&gt;&gt; classes = scanner.getComponentClasses(this.CLASS_PATH);  <br />  *  <br />  * @author wookets  <br />  *  <br />  */  <br /> public class ComponentClassScanner extends ClassPathScanningCandidateComponentProvider {  <br />  public ComponentClassScanner() {  <br />   super(false);  <br />  }  <br />  public final List&lt;Class&lt;? extends Object&gt;&gt; getComponentClasses(String basePackage) {  <br />   basePackage = basePackage == null ? &ldquo;&rdquo; : basePackage;  <br />   final List&lt;Class&lt;? extends Object&gt;&gt; classes = new ArrayList&lt;Class&lt;? extends Object&gt;&gt;();  <br />   for(final BeanDefinition candidate : this.findCandidateComponents(basePackage)) {  <br />    try {  <br />     final Class&lt;? extends Object&gt; cls = ClassUtils.resolveClassName(candidate.getBeanClassName(), ClassUtils.getDefaultClassLoader());  <br />     classes.add(cls);  <br />    } catch (final Throwable ex) {  <br />     ex.printStackTrace();  <br />    }  <br />   }  <br />   return classes;  <br />  }  <br /> }  <br /></code></pre><br />xstream xml bootstrapper. This will read in annotations and add classes to the supported classes property to avoid the above issues with binding bean things. <br /><br /><pre style="background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;"> package com.wookets.bootstrap;  <br /> import java.util.List;  <br /> import org.springframework.beans.factory.annotation.Autowired;  <br /> import org.springframework.context.ApplicationEvent;  <br /> import org.springframework.context.ApplicationListener;  <br /> import org.springframework.context.event.ContextRefreshedEvent;  <br /> import org.springframework.core.type.filter.AnnotationTypeFilter;  <br /> import org.springframework.oxm.xstream.XStreamMarshaller;  <br /> import org.springframework.stereotype.Component;  <br /> import com.thoughtworks.xstream.annotations.XStreamAlias;  <br /> /**  <br />  * This will alias the xml types with the xml marsheller, so we can use annotations on our xml types and do all aliasing  <br />  * and caching up front.  <br />  *   <br />  * @author wookets  <br />  *   <br />  */  <br /> @SuppressWarnings(&ldquo;rawtypes&rdquo;)  <br /> @Component  <br /> public class ServerStartupAliasXmlType implements ApplicationListener {  <br />  private boolean hasBeenCreated = false;  <br />  @Autowired  <br />  private XStreamMarshaller objectXmlMarshaller;  <br />  @Override  <br />  public void onApplicationEvent(ApplicationEvent event) {  <br />   if(this.hasBeenCreated)  <br />    return;  <br />   if(event instanceof ContextRefreshedEvent) {  <br />    this.hasBeenCreated = true;  <br />    final ComponentClassScanner scanner = new ComponentClassScanner();  <br />    scanner.addIncludeFilter(new AnnotationTypeFilter(XStreamAlias.class));  <br />    final List&lt;Class&lt;?&gt;&gt; classes = scanner.getComponentClasses(&ldquo;com.wookets&rdquo;);  <br />    for(final Class&lt;?&gt; c : classes) {  <br />     this.objectXmlMarshaller.getXStream().processAnnotations&copy;;  <br />    }  <br />    this.objectXmlMarshaller.setSupportedClasses(classes.toArray(new Class[0]));  <br />   }  <br />  }  <br />  public void setObjectXmlMarshaller(XStreamMarshaller objectXmlMarshaller) {  <br />   this.objectXmlMarshaller = objectXmlMarshaller;  <br />  }  <br /> }  <br /></code></pre><br />I think I had more to add, but&hellip; oh yeah&hellip; A link to some files to download&hellip;<br /><br /><a href="http://wookets.com/code/java/SpringBootstrap/">http://wookets.com/code/java/SpringBootstrap/</a><br /><br />References:<br /><br /><a href="http://forum.springsource.org/showthread.php?t=97048">http://forum.springsource.org/showthread.php?t=97048</a><br /><br /><a href="http://forum.springsource.org/showthread.php?t=79963">http://forum.springsource.org/showthread.php?t=79963</a></p>
+
+
+</div>
+
+    <div class="">
+        <p>
+  Published
+  
+    
+      by <span itemprop="author">map[name:Sean Wesenberg uri:https://plus.google.com/111523202047342274226]</span>
+    
+  
+  <time datetime="2011-05-02T14:51:00&#43;00:00">
+    2 May, 2011
+  </time>
+  
+  
+  using <span itemprop="wordCount">506</span> words.
+</p>
+
+        
+
+
+
+    </div>
+    
+    
+    
+</div>
+</div>
+</main>
+  <footer>   <footer id="footer">
+    <nav>
+      <ul>
+        <li><span>Wookets</span></li>
+        <li>
+          <a href="https://www.linkedin.com/in/wookets/">Connect on LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wookets">Give a shout on Twitter!</a>
+        </li>
+      </ul>
+    </nav>
+    <p>&copy; P.A.Wookets</p>
+  </footer> </footer>
+
+
+  <script src="/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/js/master.js" type="text/javascript">
+  </script>
+</body>
+
+</html>

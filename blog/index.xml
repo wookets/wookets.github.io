@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Wookets Wove</title>
+    <link>/blog/</link>
+    <description>Recent content in Blogs on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Mar 2018 07:21:26 -0500</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>From Blogger to Hugo</title>
+      <link>/blog/import-from-blogger/</link>
+      <pubDate>Fri, 16 Mar 2018 07:21:26 -0500</pubDate>
+      
+      <guid>/blog/import-from-blogger/</guid>
+      <description>The tools we will need It looks like there are two projects to help with this.
+ blogimport blogger-to-hugo  blogimport first The readme&amp;rsquo;s for both don&amp;rsquo;t look too great, so flipping a coin, let&amp;rsquo;s go with blogimport. Apparently blogger-to-hugo also imports images, but I don&amp;rsquo;t have any of those.
+It looks like we will have to clone down the repo and run the go file inside. Navigate to a clean directory.</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>/blog/first-post/</link>
+      <pubDate>Tue, 13 Mar 2018 22:09:55 -0500</pubDate>
+      
+      <guid>/blog/first-post/</guid>
+      <description>This blog was created with Hugo using the Kube theme authored in Markdown.</description>
+    </item>
+    
+    <item>
+      <title>Auditing Page Performance</title>
+      <link>/blog/auditing-page-performance/</link>
+      <pubDate>Sat, 26 Aug 2017 08:10:00 +0000</pubDate>
+      
+      <guid>/blog/auditing-page-performance/</guid>
+      <description>If you are on the latest Chrome (59&amp;frasl;60) you may have noticed that google as integrated lighthouse v2 into the Audits tab. This is a wonderful tool if you are looking to see how your site stacks up to google&amp;rsquo;s on standards - and hopefully enlighten you to new technologies and tools you can use to optimize your website. https://github.com/GoogleChrome/lighthouse This tool is awesome because they offer a lot of different ways in.</description>
+    </item>
+    
+    <item>
+      <title>AngularJS Mixins</title>
+      <link>/blog/angularjs-mixins/</link>
+      <pubDate>Tue, 05 Feb 2013 16:08:00 +0000</pubDate>
+      
+      <guid>/blog/angularjs-mixins/</guid>
+      <description>Angular.js mixins are an easy way to reuse code across controllers, separate functionality, and increase modularity.
+And you really don&amp;rsquo;t have to do anything special.
+Loading&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Error handling with Express 3.x</title>
+      <link>/blog/error-handling-with-express-3.x/</link>
+      <pubDate>Thu, 03 Jan 2013 15:51:00 +0000</pubDate>
+      
+      <guid>/blog/error-handling-with-express-3.x/</guid>
+      <description>Here is a quick middleware error handler. It essentially follows the express document to a T. It should however be noted that exceptions in the code will not be caught by this, since they will break the whole server. For that, you need to use node domains, which are new in 0.8.x and should be in an upcoming post. Loading&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Adding JSend methods to Express 3.x</title>
+      <link>/blog/adding-jsend-methods-to-express-3.x/</link>
+      <pubDate>Thu, 03 Jan 2013 10:32:00 +0000</pubDate>
+      
+      <guid>/blog/adding-jsend-methods-to-express-3.x/</guid>
+      <description>About JSendJSend is a specification for how web servers should respond when they respond via JSON. I find it useful mainly for quickly parsing error and success response differences. &amp;nbsp;One could use HTTP error codes (I don&amp;rsquo;t know why), but JSend is useful for keeping the client receiver simple and generic when handling responses.&amp;nbsp;
+JSend Success Example{status: &amp;ldquo;success&amp;rdquo;, data: &amp;ldquo;this could be a json object&amp;rdquo;}
+JSend Error Example{status: &amp;ldquo;error&amp;rdquo;, code: &amp;ldquo;InvalidParamter&amp;rdquo;, message: &amp;ldquo;Name is required.</description>
+    </item>
+    
+    <item>
+      <title>Changes coming soon</title>
+      <link>/blog/changes-coming-soon/</link>
+      <pubDate>Mon, 26 Nov 2012 23:48:00 +0000</pubDate>
+      
+      <guid>/blog/changes-coming-soon/</guid>
+      <description>I have ignored this blog for a bit too long (as well as the comments)&amp;hellip; I have a ton more to share regard development, work eco, and off the beaten horse path side commentary.
+Woot!</description>
+    </item>
+    
+    <item>
+      <title>Jackson JSON Deserializer using Groovy</title>
+      <link>/blog/jackson-json-deserializer-using-groovy/</link>
+      <pubDate>Wed, 22 Feb 2012 18:14:00 +0000</pubDate>
+      
+      <guid>/blog/jackson-json-deserializer-using-groovy/</guid>
+      <description>This took me about half a day to do&amp;hellip; Jackson&amp;rsquo;s documentation in certain places is a scattered shot of different ways based on version # and usually ending in half complete sentences or small specific pages that aren&amp;rsquo;t quite linked together in a relational sense. Jackson 2.0, I imagine, will further cludge the documentation due to refactors. But, by and large, it really is quite simple to write a deserializer or a serializer for that matter.</description>
+    </item>
+    
+    <item>
+      <title>Using Amplify.js to Mock Service Calls</title>
+      <link>/blog/using-amplify.js-to-mock-service-calls/</link>
+      <pubDate>Thu, 09 Feb 2012 13:48:00 +0000</pubDate>
+      
+      <guid>/blog/using-amplify.js-to-mock-service-calls/</guid>
+      <description>your-view-model.js
+
+services.js
+
+mock-services.js
+
+What&amp;rsquo;s happeing?&amp;nbsp;
+We are simply overriding out service.js with mock-services.js. So&amp;hellip; simply include the mock-service.js script AFTER you include the service.js script&amp;hellip; And once you don&amp;rsquo;t want to mock and more, simply comment out&amp;hellip;
+Resources
+http://api.jquery.com/jQuery.ajax/http://speakerdeck.com/u/dougneiner/p/streamline-your-ajax-requests-with-amplifyjs-and-jqueryhttp://amplifyjs.com/api/request/#url_substitution/routing</description>
+    </item>
+    
+    <item>
+      <title>Jackson Auto-Typing Objects</title>
+      <link>/blog/jackson-auto-typing-objects/</link>
+      <pubDate>Mon, 30 Jan 2012 14:06:00 +0000</pubDate>
+      
+      <guid>/blog/jackson-auto-typing-objects/</guid>
+      <description>I&amp;rsquo;m using the Jackson JSON framework to do some (de)+serialization for my web app, but as we all know&amp;hellip; JSON isn&amp;rsquo;t typed. Here is a quick auto-typer that I created that runs when the app starts up (in tomcat). Look through the resources / references down below for more info.
+First, create a basic mixin class.
+package wookets.json;
+import org.codehaus.jackson.annotate.JsonTypeInfo;
+import org.codehaus.jackson.annotate.JsonTypeInfo.As;
+import org.codehaus.jackson.annotate.JsonTypeInfo.Id;
+@JsonTypeInfo(use=Id.NAME, include=As.PROPERTY, property=&amp;rdquo;_type&amp;rdquo;)
+public class JacksonTyping {</description>
+    </item>
+    
+    <item>
+      <title>The Three Levels of Service</title>
+      <link>/blog/the-three-levels-of-service/</link>
+      <pubDate>Sun, 29 Jan 2012 15:14:00 +0000</pubDate>
+      
+      <guid>/blog/the-three-levels-of-service/</guid>
+      <description>Back when I first started programming, everything was about &amp;lsquo;The Three Tiers of server side applications.&amp;rsquo; Today, I find that not much has changed. Yes, the UI and top layers have been pushed to the client. If they haven&amp;rsquo;t in your apps, they should. And the bottom layer, the data layer as been almost stripped away via the ORM and Active Record patterns. Which is good, because we are getting to the guts, the middle layer, the business layer.</description>
+    </item>
+    
+    <item>
+      <title>Amazon DynamoDB Groovy DAO Update</title>
+      <link>/blog/amazon-dynamodb-groovy-dao-update/</link>
+      <pubDate>Wed, 25 Jan 2012 11:44:00 +0000</pubDate>
+      
+      <guid>/blog/amazon-dynamodb-groovy-dao-update/</guid>
+      <description>Here is a an update version of the DAO from the previous post. I added update methods (very useful)&amp;hellip;
+Next I will be working on some relationship type logic. Meaning, having a table that holds relationships and specifying you want those relationships (a list of ids) that will query that, then query the actual keys table and return the objects you want&amp;hellip;
+Sorry about not posting on Github. Maybe one day I&amp;rsquo;ll get it up there.</description>
+    </item>
+    
+    <item>
+      <title>Groovy Amazon DynamoDB Simple Example</title>
+      <link>/blog/groovy-amazon-dynamodb-simple-example/</link>
+      <pubDate>Sun, 22 Jan 2012 09:43:00 +0000</pubDate>
+      
+      <guid>/blog/groovy-amazon-dynamodb-simple-example/</guid>
+      <description>The following is a two class example of Amazon&amp;rsquo;s DynamoDB. The first class is just a Dao (yes, I still prefer Daos over ARs).
+package wookets.dynamo
+import com.amazonaws.auth.AWSCredentials
+import com.amazonaws.auth.PropertiesCredentials
+import com.amazonaws.services.dynamodb.AmazonDynamoDBClient
+import com.amazonaws.services.dynamodb.model.AttributeValue
+import com.amazonaws.services.dynamodb.model.ComparisonOperator
+import com.amazonaws.services.dynamodb.model.DeleteItemRequest
+import com.amazonaws.services.dynamodb.model.DeleteItemResult
+import com.amazonaws.services.dynamodb.model.GetItemRequest
+import com.amazonaws.services.dynamodb.model.GetItemResult
+import com.amazonaws.services.dynamodb.model.Key
+import com.amazonaws.services.dynamodb.model.PutItemRequest
+import com.amazonaws.services.dynamodb.model.PutItemResult
+class DynamoDao {
+AmazonDynamoDBClient client
+DynamoDao() {
+InputStream credentialsAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(&amp;ldquo;AwsCredentials.properties&amp;rdquo;);
+AWSCredentials credentials = new PropertiesCredentials(credentialsAsStream);
+client = new AmazonDynamoDBClient(credentials);</description>
+    </item>
+    
+    <item>
+      <title>Amazon S3 Website Hosting DNS Gotchya</title>
+      <link>/blog/amazon-s3-website-hosting-dns-gotchya/</link>
+      <pubDate>Mon, 09 Jan 2012 15:13:00 +0000</pubDate>
+      
+      <guid>/blog/amazon-s3-website-hosting-dns-gotchya/</guid>
+      <description>Recently, while setting up a website on Amazon&amp;rsquo;s S3 (see here), I was also attempting to set the mx records of the domain to point to google apps (see here). But, the mx records were not updating.
+I thought this was a hover.com problem. Btw, I&amp;rsquo;ve never had a company answer my phone call faster than these guys. It is actually quite freaky and I was unprepared with my question. Literally took less than a second to reach and start talking to a human being.</description>
+    </item>
+    
+    <item>
+      <title>jQuery.Address Example</title>
+      <link>/blog/jquery.address-example/</link>
+      <pubDate>Mon, 12 Dec 2011 21:04:00 +0000</pubDate>
+      
+      <guid>/blog/jquery.address-example/</guid>
+      <description>Here is a very simple example of using jquery.address to create a single page external partial view app.
+Demo:&amp;nbsp;http://archive.wookets.com/examples/html5/jquery-address/
+And now I&amp;rsquo;m left very confused as to why there are other examples out there that are so much more complex&amp;hellip; I guess I&amp;rsquo;ll find out&amp;hellip;
+References
+http://www.asual.com/jquery/address/docs/http://api.jquery.com/html/http://api.jquery.com/jQuery.get/</description>
+    </item>
+    
+    <item>
+      <title>Knockout.js External View</title>
+      <link>/blog/knockout.js-external-view/</link>
+      <pubDate>Mon, 12 Dec 2011 14:04:00 +0000</pubDate>
+      
+      <guid>/blog/knockout.js-external-view/</guid>
+      <description>Source:&amp;nbsp;https://github.com/wookets/koexternalview
+The project is a very simple single page knockout application with hash based navigation and the ability to read in external partial html views.
+Originally taken from&amp;hellip;
+https://github.com/thelinuxlich/knockout.spi</description>
+    </item>
+    
+    <item>
+      <title>Less (CSS) Grid Example</title>
+      <link>/blog/less-css-grid-example/</link>
+      <pubDate>Sun, 11 Dec 2011 10:48:00 +0000</pubDate>
+      
+      <guid>/blog/less-css-grid-example/</guid>
+      <description>One of the main reasons for using a language like Less is to move away from using &amp;lsquo;span10&amp;rsquo; or &amp;lsquo;col10&amp;rsquo; when using a grid based html layout for your webpage.
+After all&amp;hellip;
+&amp;lt;div class=&amp;ldquo;row&amp;rdquo;&amp;gt;
+&amp;nbsp; &amp;lt;div class=&amp;ldquo;span10&amp;rdquo;&amp;gt;Main Content&amp;lt;/div&amp;gt;
+&amp;nbsp; &amp;lt;div class=&amp;ldquo;span4&amp;rdquo;&amp;gt;Side Content&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+Doesn&amp;rsquo;t seem right&amp;hellip; But&amp;hellip;
+&amp;lt;div class=&amp;ldquo;content&amp;rdquo;&amp;gt;
+&amp;nbsp; &amp;lt;div class=&amp;ldquo;main&amp;rdquo;&amp;gt;Main Content&amp;lt;/div&amp;gt;
+&amp;nbsp; &amp;lt;div class=&amp;ldquo;side&amp;rdquo;&amp;gt;Side Content&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+Seems a little better&amp;hellip;
+The problem is, how do we apply .span10 to .</description>
+    </item>
+    
+    <item>
+      <title>Website Redesign</title>
+      <link>/blog/website-redesign/</link>
+      <pubDate>Sun, 11 Dec 2011 10:40:00 +0000</pubDate>
+      
+      <guid>/blog/website-redesign/</guid>
+      <description>http://wookets.com/
+Things of note&amp;hellip;
+It should be less likely to crash your browser now given the absence of the previous crude attempt to simulate rain via javascript.&amp;nbsp;The design is based on (see &amp;lsquo;stolen&amp;rsquo;) from Twitter&amp;rsquo;s bootstrap project. Go check it out here.It is done using html5 and css3 with no care to support old insecure non-standard respecting browsers. &amp;nbsp;Content will come&amp;hellip; In time&amp;hellip;&amp;nbsp;
+PS - It is very likely&amp;hellip; Actually, it would be very surprising and somewhat in violation of the known laws of internet linking that every previously blogged demo and example is not broken.</description>
+    </item>
+    
+    <item>
+      <title>Static vs Dynamic Groovy</title>
+      <link>/blog/static-vs-dynamic-groovy/</link>
+      <pubDate>Sat, 03 Dec 2011 22:46:00 +0000</pubDate>
+      
+      <guid>/blog/static-vs-dynamic-groovy/</guid>
+      <description>If you try groovy++, the results do bare out. And it will add static checking to your code inside of eclipse, which could be argued is more important than adding more servers.
+However, it looks like groovy is adding first class support for the functionality in 2.0. Though it seems static checking will be in first and the performance improvements will happen later.
+See the reference links below for the relevant blog posts.</description>
+    </item>
+    
+    <item>
+      <title>Spring AOP Method Profiler</title>
+      <link>/blog/spring-aop-method-profiler/</link>
+      <pubDate>Sat, 03 Dec 2011 22:14:00 +0000</pubDate>
+      
+      <guid>/blog/spring-aop-method-profiler/</guid>
+      <description>This is a poor man&amp;rsquo;s application profiler. Note, that this profiler is going to be limited, since it is running inside the application, but also nice that it is running inside the application. Anyway, I find it helpful to measure individual service calls against other service calls. One could even add a limit into this method, if it takes longer than x, send me an email because something is wrong&amp;hellip; Though, I&amp;rsquo;m pretty sure this code is not to great for production builds.</description>
+    </item>
+    
+    <item>
+      <title>SAML 2.0 using Groovy and Spring (part 2)</title>
+      <link>/blog/saml-2.0-using-groovy-and-spring-part-2/</link>
+      <pubDate>Tue, 22 Nov 2011 21:29:00 +0000</pubDate>
+      
+      <guid>/blog/saml-2.0-using-groovy-and-spring-part-2/</guid>
+      <description>In part 1, I showed you how to write a Controller and a Service which creates the AuthnRequest and sends a redirect.
+I should mention that Controller is entirely derived from Spring&amp;rsquo;s MVC use of the word, but we in fact are not using it to handle or communicate with a view, just for the amazingly simple HTTP servlet like features.
+Now, in part 2, we will add to the Controller and Service classes methods which make handling the incoming SAML Assertion HTTP POST cake.</description>
+    </item>
+    
+    <item>
+      <title>SAML 2.0 using Groovy and Spring (part 1)</title>
+      <link>/blog/saml-2.0-using-groovy-and-spring-part-1/</link>
+      <pubDate>Tue, 22 Nov 2011 13:07:00 +0000</pubDate>
+      
+      <guid>/blog/saml-2.0-using-groovy-and-spring-part-1/</guid>
+      <description>Overview
+Recently I have had to do a small SAML 2.0 integration project for one of our clients to enable single sign on. Here are some thoughts on the issue.
+Saml 2.0 is pretty easy
+Much can be said about SOAP and insane and inane web service API&amp;rsquo;s, but SAML 2.0 is pretty straight forward. The basic flow can be summed;
+System A -&amp;nbsp;Identity&amp;nbsp;holder
+This system is the authority of authentication for our users.</description>
+    </item>
+    
+    <item>
+      <title>Amazon Elastic Beanstalk with SSL</title>
+      <link>/blog/amazon-elastic-beanstalk-with-ssl/</link>
+      <pubDate>Fri, 11 Nov 2011 08:52:00 +0000</pubDate>
+      
+      <guid>/blog/amazon-elastic-beanstalk-with-ssl/</guid>
+      <description>When you deploy your first elastic beanstalk application the URL will similar to&amp;hellip;
+http://myapp-cname.elasticbeanstalk.com
+Where &amp;lsquo;myapp-cname&amp;rsquo; is the assigned cname when you first launch your environment.&amp;nbsp;
+What if we want to resolve our own domain, e.g.&amp;nbsp;
+http://myapp.yourdomain.com
+This is pretty straight forward (assuming some background in working with cnames)&amp;hellip;&amp;nbsp;
+CNAME
+1. Go into the Amazon AWS console and locate the elastic load balancer. This is generally found under EC2 -&amp;gt; load balancers.</description>
+    </item>
+    
+    <item>
+      <title>Spring 3.1 Environment Profile</title>
+      <link>/blog/spring-3.1-environment-profile/</link>
+      <pubDate>Tue, 08 Nov 2011 09:24:00 +0000</pubDate>
+      
+      <guid>/blog/spring-3.1-environment-profile/</guid>
+      <description>The most useful addition to Spring 3.1 I&amp;rsquo;ve found is support for environments (called Profiles).
+Here is the official post on this topic.
+http://blog.springsource.com/2011/02/11/spring-framework-3-1-m1-released/
+Profiles allow you to add / remove features / settings of your application based on the environment it is actually running in.
+Example:
+&amp;lt;beans profile=&amp;ldquo;beta&amp;rdquo;&amp;gt;
+&amp;lt;bean id=&amp;ldquo;appProperties&amp;rdquo; class=&amp;ldquo;wookets.bootstrap.AppProperties&amp;rdquo;&amp;gt;
+&amp;lt;property name=&amp;ldquo;someprop&amp;rdquo; value=&amp;ldquo;CHEESE&amp;rdquo;/&amp;gt;
+&amp;lt;/bean&amp;gt;
+&amp;lt;/beans&amp;gt;
+&amp;lt;beans profile=&amp;ldquo;local&amp;rdquo;&amp;gt;
+&amp;lt;bean id=&amp;ldquo;appProperties&amp;rdquo; class=&amp;ldquo;wookets.bootstrap.AppProperties&amp;rdquo;&amp;gt;
+&amp;lt;property name=&amp;ldquo;someprop&amp;rdquo; value=&amp;ldquo;WAFFLES&amp;rdquo;/&amp;gt;
+&amp;lt;/bean&amp;gt;
+&amp;lt;/beans&amp;gt;
+
+If we are running the application on our beta server, we&amp;rsquo;ll get CHEESE.</description>
+    </item>
+    
+    <item>
+      <title>Does anyone use A-Records anymore?</title>
+      <link>/blog/does-anyone-use-a-records-anymore/</link>
+      <pubDate>Mon, 07 Nov 2011 13:42:00 +0000</pubDate>
+      
+      <guid>/blog/does-anyone-use-a-records-anymore/</guid>
+      <description>My blog keeps trying to ping my Amazon S3 account to serve content. FYI, my main page wookets.com is &amp;nbsp;hosted on Amazon S3 in a bucket. The bucket is web enabled with a policy file (see previous post). However, this blog is hosted on Google&amp;rsquo;s blogger.com.
+My Hover DNS settings had three A-Records for my blog that resolved to google&amp;rsquo;s server, but checking out the latest Google blogger docs it seems like those A-Records are now defunct.</description>
+    </item>
+    
+    <item>
+      <title>A Spring Controller Invoker Service w/ Groovy Named Params</title>
+      <link>/blog/a-spring-controller-invoker-service-w-groovy-named-params/</link>
+      <pubDate>Sun, 06 Nov 2011 20:53:00 +0000</pubDate>
+      
+      <guid>/blog/a-spring-controller-invoker-service-w-groovy-named-params/</guid>
+      <description>I&amp;rsquo;m attempting to use the invoker pattern with a spring controller. For instance&amp;hellip;
+/app/invoke/hamburger/makeme
+Navigating to this URL with either a GET or a POST should do the following&amp;hellip;
+1. Look up and get a service called &amp;lsquo;HamburgerService&amp;rsquo; from the spring context.2. Invoke a method on our service bean called &amp;lsquo;makeme&amp;rsquo;3. If any params are passed in, pass them in as arguments to the makeme method.Example Groovy code:
+HamburgerService.groovy
+class HamburgerService {</description>
+    </item>
+    
+    <item>
+      <title>Spring MVC letting tomcat resolve files</title>
+      <link>/blog/spring-mvc-letting-tomcat-resolve-files/</link>
+      <pubDate>Sat, 05 Nov 2011 21:07:00 +0000</pubDate>
+      
+      <guid>/blog/spring-mvc-letting-tomcat-resolve-files/</guid>
+      <description>Finally found what I was looking for after much searching&amp;hellip;
+In your web.xml:
+&amp;nbsp; &amp;lt;!&amp;ndash; Handles all requests into the application &amp;ndash;&amp;gt;&amp;nbsp; &amp;lt;servlet&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;servlet-name&amp;gt;spring&amp;lt;/servlet-name&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt;/servlet-class&amp;gt;&amp;nbsp; &amp;lt;/servlet&amp;gt;&amp;nbsp; &amp;lt;servlet-mapping&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;servlet-name&amp;gt;spring&amp;lt;/servlet-name&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&amp;nbsp; &amp;lt;/servlet-mapping&amp;gt;The problem:&amp;nbsp;Spring&amp;rsquo;s dispatcher servlet handles ALL requests&amp;hellip; Yes, you get nice clean urls to your controller request mappings, but simple things like /index.html or / or /someimage.jpg fall apart. Spring attempts to run those requests through it&amp;rsquo;s own view resolvers, when you most likely want to have the default tomcat servlet handle it.</description>
+    </item>
+    
+    <item>
+      <title>Adobe Muse Pre-Release Tinkering</title>
+      <link>/blog/adobe-muse-pre-release-tinkering/</link>
+      <pubDate>Sun, 30 Oct 2011 18:10:00 +0000</pubDate>
+      
+      <guid>/blog/adobe-muse-pre-release-tinkering/</guid>
+      <description>Played around with Adobe Muse Pre-release 3 today.
+Result:&amp;nbsp;http://wookets.com/code/adobe_muse/webarch/
+Pretty crummy. The site that I put together that is&amp;hellip;
+Muse is pretty limited on options, which makes it pretty straight forward to use, but I&amp;rsquo;m leery of making anything professional with such a tool. It does the same thing as dreamweaver and spits out code at the end and if you need a feature which the Muse tool doesn&amp;rsquo;t have&amp;hellip; Pretty much too bad, because changing generated code will never be fun.</description>
+    </item>
+    
+    <item>
+      <title>How to compile Coffeescript, Jade, Stylus in Eclipse</title>
+      <link>/blog/how-to-compile-coffeescript-jade-stylus-in-eclipse/</link>
+      <pubDate>Sat, 29 Oct 2011 12:32:00 +0000</pubDate>
+      
+      <guid>/blog/how-to-compile-coffeescript-jade-stylus-in-eclipse/</guid>
+      <description>First, here are some links to get you oriented&amp;hellip;
+Coffeescript -&amp;nbsp;http://jashkenas.github.com/coffee-script/#top
+Jade -&amp;nbsp;https://github.com/visionmedia/jade
+Stylus -&amp;nbsp;http://learnboost.github.com/stylus/
+Each of these is a productivity enhancement. A language to express another language in a more terse manner. One of the main goals of each is DRY (don&amp;rsquo;t repeat yourself).
+The big problem with these is&amp;hellip; How do I compile them in my environment with as little hassle as possible. Since, we are looking to become more, not less productive.</description>
+    </item>
+    
+    <item>
+      <title>Apache Ivy Private Repository</title>
+      <link>/blog/apache-ivy-private-repository/</link>
+      <pubDate>Mon, 17 Oct 2011 22:28:00 +0000</pubDate>
+      
+      <guid>/blog/apache-ivy-private-repository/</guid>
+      <description>If you want your open source project to succeed, write good documentation&amp;hellip; or just have a bunch of people blog about it and do it for you.
+I have recently been playing around with Apache Ivy and trying to get it to work. Yes, I&amp;rsquo;ve looked at Maven. To be honest, I don&amp;rsquo;t want / need a build system. Right click export is how I build and while that my seem crude to you, I really only release every two or so weeks.</description>
+    </item>
+    
+    <item>
+      <title>Moving beyond the web page</title>
+      <link>/blog/moving-beyond-the-web-page/</link>
+      <pubDate>Fri, 07 Oct 2011 08:18:00 +0000</pubDate>
+      
+      <guid>/blog/moving-beyond-the-web-page/</guid>
+      <description>The barrier to entry for web development and systems configuration is so low that it is applicable to individuals with enough cognitive ability to process a work flow. That pool may be small, as many can&amp;rsquo;t correctly comprehend their own work flow or the ideal. However, software architects will be whittled down, forced to join the engineers and scientists in becoming ever more engrained in fluid repeatable generic design patterns not just for a monitor or a website, but for a machine of specific utility.</description>
+    </item>
+    
+    <item>
+      <title>How to architect your next web app</title>
+      <link>/blog/how-to-architect-your-next-web-app/</link>
+      <pubDate>Thu, 06 Oct 2011 08:35:00 +0000</pubDate>
+      
+      <guid>/blog/how-to-architect-your-next-web-app/</guid>
+      <description>Separate the client and the server
+The server - responsible for complex shared business methods, transactions, data management, centralized storage, synchronization.
+The client - responsible for UI display and handling interactions, styling, components, etc.
+You should push as much as you can on to the client. Today&amp;rsquo;s javascript engines and multi-core processors can handle more computation. The client and server only talk using JSON, XML, REST, or AMF3 (if using flex) or similar methods.</description>
+    </item>
+    
+    <item>
+      <title>Web Application Project Structure</title>
+      <link>/blog/web-application-project-structure/</link>
+      <pubDate>Thu, 06 Oct 2011 08:12:00 +0000</pubDate>
+      
+      <guid>/blog/web-application-project-structure/</guid>
+      <description>Having done this stuff for over a decade, here is the current best organization of code I&amp;rsquo;ve seen for a large enterprise type project (it will work just as well for small projects).
+Btw, I should mention this is based on an architecture of fat client / thin server, but ability to shove off processing to one or the other. The server and client exchange information via JSON, XML, etc. The server does not render html.</description>
+    </item>
+    
+    <item>
+      <title>Labels are a good thing</title>
+      <link>/blog/labels-are-a-good-thing/</link>
+      <pubDate>Wed, 05 Oct 2011 10:16:00 +0000</pubDate>
+      
+      <guid>/blog/labels-are-a-good-thing/</guid>
+      <description>Normal 0     false false false  EN-US JA X-NONE                  /* Style Definitions */ table.MsoNormalTable {mso-style-name:&#34;Table Normal&#34;; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-priority:99; mso-style-parent:&#34;&#34;; mso-padding-alt:0in 5.4pt 0in 5.4pt; mso-para-margin:0in; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:12.0pt; font-family:Cambria; mso-ascii-font-family:Cambria; mso-ascii-theme-font:minor-latin; mso-hansi-font-family:Cambria; mso-hansi-theme-font:minor-latin;}   In a single word you can understand the whole of a human being simply by the label he or she applies unto themself.</description>
+    </item>
+    
+    <item>
+      <title>Unintelligent Design</title>
+      <link>/blog/unintelligent-design/</link>
+      <pubDate>Wed, 05 Oct 2011 10:12:00 +0000</pubDate>
+      
+      <guid>/blog/unintelligent-design/</guid>
+      <description>Normal 0     false false false  EN-US JA X-NONE                  /* Style Definitions */ table.MsoNormalTable {mso-style-name:&#34;Table Normal&#34;; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-priority:99; mso-style-parent:&#34;&#34;; mso-padding-alt:0in 5.4pt 0in 5.4pt; mso-para-margin:0in; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:12.0pt; font-family:Cambria; mso-ascii-font-family:Cambria; mso-ascii-theme-font:minor-latin; mso-hansi-font-family:Cambria; mso-hansi-theme-font:minor-latin;}   Creatonism, it doesn’t matter what you call it really.</description>
+    </item>
+    
+    <item>
+      <title>Haml to Html Converter (sans Rails Project)</title>
+      <link>/blog/haml-to-html-converter-sans-rails-project/</link>
+      <pubDate>Sat, 17 Sep 2011 12:59:00 +0000</pubDate>
+      
+      <guid>/blog/haml-to-html-converter-sans-rails-project/</guid>
+      <description>The simple fact is&amp;hellip;
+!!! 5%html&amp;nbsp; %head&amp;nbsp; &amp;nbsp; %title Awesome Sauce Website&amp;nbsp; %body&amp;nbsp; &amp;nbsp; %h1 Do you like sauce?&amp;nbsp; &amp;nbsp; -# let me answer the question&amp;nbsp; &amp;nbsp; .answer&amp;nbsp; Red or white?is better than&amp;hellip;
+&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;nbsp; &amp;lt;head&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;title&amp;gt;Awesome Sauce Website&amp;lt;/title&amp;gt;&amp;nbsp; &amp;lt;/head&amp;gt;&amp;nbsp; &amp;lt;body&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;h1&amp;gt;Do you like sauce?&amp;lt;/h1&amp;gt;&amp;nbsp; &amp;nbsp; &amp;lt;div class=&amp;lsquo;answer&amp;rsquo;&amp;gt;Red or white?&amp;lt;/div&amp;gt;&amp;nbsp; &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+The above is Haml followed by HTML. While it&amp;rsquo;s true that most decent IDEs and Text Editors will support code completion of the tags, xml is verbose and sloppy by today&amp;rsquo;s standards.</description>
+    </item>
+    
+    <item>
+      <title>Groovy 1.8 Logging</title>
+      <link>/blog/groovy-1.8-logging/</link>
+      <pubDate>Sun, 04 Sep 2011 09:10:00 +0000</pubDate>
+      
+      <guid>/blog/groovy-1.8-logging/</guid>
+      <description>Finally, logging that makes some sense&amp;hellip;
+In Groovy 1.8 they added a very nifty new way to do logging. But first, let&amp;rsquo;s revisit how we used to do logging.
+&amp;lt;code&amp;gt;&amp;nbsp; private static final Logger log = Logger.getLogger(CrudService.class);&amp;nbsp; &amp;nbsp;if(log.isDebugEnabled()) {&amp;nbsp; &amp;nbsp; &amp;nbsp; String debugMsg = &amp;ldquo;INCOMING:: Create: &amp;ldquo; + resource.getClass() + &amp;ldquo;::&amp;rdquo; + resource.getId();&amp;nbsp; &amp;nbsp; &amp;nbsp; log.debug(debugMsg);&amp;nbsp; &amp;nbsp; }&amp;lt;/code&amp;gt;
+The main problem with the above piece of code is the inane amount of verbosity used to do something that should be really really really simple.</description>
+    </item>
+    
+    <item>
+      <title>Amazon SQS &#43; SNS Conceptual</title>
+      <link>/blog/amazon-sqs--sns-conceptual/</link>
+      <pubDate>Thu, 01 Sep 2011 17:48:00 +0000</pubDate>
+      
+      <guid>/blog/amazon-sqs--sns-conceptual/</guid>
+      <description>The above diagram is a quick look at a very high level conceptual view of how one might go about structuring their web applications to take advantage of Amazon&amp;rsquo;s SNS and SQS.
+Amazon SNS -&amp;nbsp;http://aws.amazon.com/sns/
+Amazon SNS provides a Simple Notification Service for your apps. A line of thinking that maybe helpful would be viewing your app as sending a text message to the cloud. I use cloud as a generic term, because you are actually pushing your message to an unknown which will then re-route it to the system or services you wish to inform.</description>
+    </item>
+    
+    <item>
+      <title>Disque Commenting</title>
+      <link>/blog/disque-commenting/</link>
+      <pubDate>Mon, 22 Aug 2011 22:54:00 +0000</pubDate>
+      
+      <guid>/blog/disque-commenting/</guid>
+      <description>Added disque commenting system to this blog...
+Was actually a little too easy to add... You actually don&#39;t have to do anything... Just a few mouse clicks and put a bite or two of some soggy waffles down your throat...
+www.disqus.com </description>
+    </item>
+    
+    <item>
+      <title>Using S3 to host your website</title>
+      <link>/blog/using-s3-to-host-your-website/</link>
+      <pubDate>Mon, 22 Aug 2011 22:26:00 +0000</pubDate>
+      
+      <guid>/blog/using-s3-to-host-your-website/</guid>
+      <description>In the process (nar shall be completed) of plumping wookets.com (and link wookets.com) to amazon&amp;rsquo;s s3 webhosting bucket featurette.
+Standard references apply. This means go look at the reference link for the step-by-step. Time to go watch Judge Dredd. Holy stone sly, are they making a remake? http://www.imdb.com/title/tt1343727/
+Update: handling www.
+www.wookets.com (or your own www.website.com) can be accommodated by making another bucket (ie www.wookets.com) and then using a simple html redirect.</description>
+    </item>
+    
+    <item>
+      <title>A flex [Model] tag</title>
+      <link>/blog/a-flex-model-tag/</link>
+      <pubDate>Mon, 15 Aug 2011 14:55:00 +0000</pubDate>
+      
+      <guid>/blog/a-flex-model-tag/</guid>
+      <description>If you are unfamiliar with the Presentation Model design pattern (MVVM) or declarative UI, please google and / or read the link below.
+http://swizframework.jira.com/wiki/display/SWIZ/Presentation+Model
+http://en.wikipedia.org/wiki/Model_View_ViewModel
+Now, what I&amp;rsquo;ve done is taken this design model and made a tag for Swiz flex applications.
+http://swizframework.org/
+Reasons:
+1. I was sick of declaring prototype beans.
+2. [Model] is more clear than [Inject]&amp;hellip; In terms of making sure people are following the pattern.
+3. I did not like (but the tag does support) the idea of changing a UI state in the Model code.</description>
+    </item>
+    
+    <item>
+      <title>MVVM in javascript html</title>
+      <link>/blog/mvvm-in-javascript-html/</link>
+      <pubDate>Fri, 05 Aug 2011 13:37:00 +0000</pubDate>
+      
+      <guid>/blog/mvvm-in-javascript-html/</guid>
+      <description>http://knockoutjs.com/
+Seems to be what I&amp;rsquo;ve been looking for&amp;hellip; That is, a framework that supports MVVM (Model View View Model) pattern (aka Presentation Pattern)&amp;hellip; For moving from flex to html5 / javascript.</description>
+    </item>
+    
+    <item>
+      <title>Spring ContentNegotiatingViewResolver ExceptionHandler mismatch fix</title>
+      <link>/blog/spring-contentnegotiatingviewresolver-exceptionhandler-mismatch-fix/</link>
+      <pubDate>Fri, 05 Aug 2011 13:33:00 +0000</pubDate>
+      
+      <guid>/blog/spring-contentnegotiatingviewresolver-exceptionhandler-mismatch-fix/</guid>
+      <description>The org.springframework.web.servlet.view.ContentNegotiatingViewResolver let&#39;s you map a response from your controller and have it auto formatted without a nary of hint in the actual code. However, exception handling of the controller does not seem to follow this&amp;nbsp;ideology. Maybe this will be fixed in a future version (I hope) or is already fixed in a newer version (don&#39;t feel like upgrading libs atm). For context, I&#39;m using Spring 3.0.5-Release.&amp;nbsp;Here is how my exception handler should look and act.</description>
+    </item>
+    
+    <item>
+      <title>ifnotset function in php</title>
+      <link>/blog/ifnotset-function-in-php/</link>
+      <pubDate>Wed, 03 Aug 2011 17:22:00 +0000</pubDate>
+      
+      <guid>/blog/ifnotset-function-in-php/</guid>
+      <description>Here is a simple php function that acts like a ternary if-else operator, but is a bit shorter. I believe groovy has something similar, that is; native support for what I&amp;rsquo;m trying to do&amp;hellip;
+The crux:
+// old school
+if(var1 == null) {
+&amp;nbsp; var1 = var3;
+} else { // this else is really&amp;nbsp;unnecessary
+&amp;nbsp; var1 = var1;
+}
+// modified above example
+if(var1 == null) var1 = var3;</description>
+    </item>
+    
+    <item>
+      <title>Leave a feature out of your next project</title>
+      <link>/blog/leave-a-feature-out-of-your-next-project/</link>
+      <pubDate>Wed, 03 Aug 2011 10:32:00 +0000</pubDate>
+      
+      <guid>/blog/leave-a-feature-out-of-your-next-project/</guid>
+      <description>Apple, undisputed masters of marketing and sales, do one thing extremely well. Yes, great showmanship, great ecosystem (we&amp;rsquo;ll take care of you) and great product quality are part of their strategy. However, less talked about is how they remove features. How can you ship a modern desktop pc without a DVD drive? What about the lack of even batting an eye at bluray? Hdmi out? VGA out? Dvi out? All are out or never made it on a single laptop.</description>
+    </item>
+    
+    <item>
+      <title>Flash Builder &#39;Add Project&#39; not working (with work around)</title>
+      <link>/blog/flash-builder-add-project-not-working-with-work-around/</link>
+      <pubDate>Mon, 01 Aug 2011 11:32:00 +0000</pubDate>
+      
+      <guid>/blog/flash-builder-add-project-not-working-with-work-around/</guid>
+      <description>Update:&amp;nbsp;Checking out the project under a different name fixed things... What?!? I hate eclipse... &amp;nbsp;The issue:&amp;nbsp;Orange question mark&#39;s in the gutter of flash builder 4.5 when looking at import statements or class references of an &#39;Added library&#39;.&amp;nbsp;I&#39;m not even sure this is an OSX issue or what is going on, but flash builder refuses to compile in (for the source editor at least) the library. Below is what your build path should look like when referencing a project.</description>
+    </item>
+    
+    <item>
+      <title>Installing Subclipse / SVN on Lion</title>
+      <link>/blog/installing-subclipse--svn-on-lion/</link>
+      <pubDate>Thu, 28 Jul 2011 09:37:00 +0000</pubDate>
+      
+      <guid>/blog/installing-subclipse--svn-on-lion/</guid>
+      <description>Useful if you just got a new mac with Lion installed and need to get subclipse up and running. Collabnet hasn&amp;rsquo;t updated the SVN binaries to 10.7 yet. So a work around.
+&amp;ldquo;Open this file : sudo pico /System/Library/Core Services/SystemVersi on.plist change version to 10.6 wherever you see 10.7 install subversion change back to 10.7&amp;rdquo; (as taken from below)
+Reference:
+http://stackoverflow.com/questions/6791989/subclipse-in-mac-os-lion</description>
+    </item>
+    
+    <item>
+      <title>Flex Navigation Demo</title>
+      <link>/blog/flex-navigation-demo/</link>
+      <pubDate>Thu, 21 Jul 2011 19:43:00 +0000</pubDate>
+      
+      <guid>/blog/flex-navigation-demo/</guid>
+      <description>Demo and Source (right-click):
+http://wookets.com/code/flex/NaviDemo/FlexNaviDemo.html
+A very simple navigation demo.
+The crux is&amp;hellip; Define your views at the root of the application. Then use a contextual class to update the root view a generic &amp;lsquo;goto&amp;rsquo; function. This is done view the static Navi class, but could certainly be done using IoC or a Singleton type pattern. FYI, this is using states, but one could also use a viewstack (there is a flex 4 version somewhere around here)&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Spotify Initial Reaction</title>
+      <link>/blog/spotify-initial-reaction/</link>
+      <pubDate>Thu, 14 Jul 2011 19:00:00 +0000</pubDate>
+      
+      <guid>/blog/spotify-initial-reaction/</guid>
+      <description>Pros:
+- Streaming
+- UI / Searching is extremely fast
+- Can sync own music files
+Cons:
+- No &amp;lsquo;genius&amp;rsquo; mode custom playlists&amp;hellip; Can&amp;rsquo;t they make it so based on a song it loads a variety of music to create a playlist with new artists that I can find?
+- The UI is cumbersome. A better album view would be nice. Unless you&amp;rsquo;re searching their online database, everything revolves around playlists.</description>
+    </item>
+    
+    <item>
+      <title>jQuery raindrops (text)</title>
+      <link>/blog/jquery-raindrops-text/</link>
+      <pubDate>Mon, 11 Jul 2011 14:14:00 +0000</pubDate>
+      
+      <guid>/blog/jquery-raindrops-text/</guid>
+      <description>I made a raindrop type effect for my website. Obviously, one could tweak it to get it closer to the desired effect one would be looking to achieve, but&amp;hellip; Website: http://wookets.com/
+Archive: http://wookets.com/archive/wookets-com-july2011/
+Everything is javascript, so you can right click and view the source. I was having some major problems, but breaking everything out into distinct functions seems to have alleviated those&amp;hellip; Notably the generating and the adding of droplets and the dropping.</description>
+    </item>
+    
+    <item>
+      <title>Flex 4 Composite Component (templating)</title>
+      <link>/blog/flex-4-composite-component-templating/</link>
+      <pubDate>Thu, 23 Jun 2011 12:01:00 +0000</pubDate>
+      
+      <guid>/blog/flex-4-composite-component-templating/</guid>
+      <description>Sorry, no example, just some quick code&amp;hellip;
+Here is how you use the component which is going to facade our complexity&amp;hellip;
+&amp;lt;components:FormItem label=&amp;quot;Name:&amp;quot; help=&amp;quot;e.g. Increase Revenue&amp;quot;&amp;gt;
+&amp;lt;s:TextInput text=&amp;quot;@{pm.selectedGoal.name}&amp;quot; maxChars=&amp;quot;160&amp;quot; width=&amp;quot;100%&amp;quot;/&amp;gt;
+&amp;lt;/components:FormItem&amp;gt;
+
+And what is happening behind the scenes&amp;hellip;
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;s:Group xmlns:fx=&amp;quot;http://ns.adobe.com/mxml/2009&amp;quot; xmlns:s=&amp;quot;library://ns.adobe.com/flex/spark&amp;quot;
+xmlns:mx=&amp;quot;library://ns.adobe.com/flex/mx&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;
+&amp;lt;fx:Declarations&amp;gt;
+&amp;lt;fx:String id=&amp;quot;label&amp;quot;/&amp;gt;
+&amp;lt;fx:String id=&amp;quot;help&amp;quot;/&amp;gt;
+&amp;lt;/fx:Declarations&amp;gt;
+&amp;lt;fx:Script&amp;gt;
+&amp;lt;![CDATA[
+public function set content(value:Array):void {
+contentGroup.mxmlContent = value;
+}
+]]&amp;gt;
+&amp;lt;/fx:Script&amp;gt;
+&amp;lt;s:layout&amp;gt;
+&amp;lt;s:VerticalLayout paddingBottom=&amp;quot;15&amp;quot;/&amp;gt;
+&amp;lt;/s:layout&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>The probability of a &#39;hit&#39; song in your head playing on the radio when you get in your car</title>
+      <link>/blog/the-probability-of-a-hit-song-in-your-head-playing-on-the-radio-when-you-get-in-your-car/</link>
+      <pubDate>Wed, 22 Jun 2011 18:21:00 +0000</pubDate>
+      
+      <guid>/blog/the-probability-of-a-hit-song-in-your-head-playing-on-the-radio-when-you-get-in-your-car/</guid>
+      <description>On my way to hockey this morning (6:45am), Sufjan Stevens (hopefully I just butchered his name) was playing on the current. It just happened to be the song that was stuck in my head, since they played it on the radio the day before (at least the female backing harmony chorus part was stuck in my head). Btw, the song is from Age of Adz, but I haven&amp;rsquo;t the foggiest about the name.</description>
+    </item>
+    
+    <item>
+      <title>Presentation Model Flex and Swiz Framework</title>
+      <link>/blog/presentation-model-flex-and-swiz-framework/</link>
+      <pubDate>Wed, 22 Jun 2011 17:53:00 +0000</pubDate>
+      
+      <guid>/blog/presentation-model-flex-and-swiz-framework/</guid>
+      <description>The importance of using a presentation model for keeping your flex pages clean of code and your backend methods reactionary.
+Here is an example of a typical flex file.
+&amp;lt;?xml version=&amp;ldquo;1.0&amp;rdquo; encoding=&amp;ldquo;utf-8&amp;rdquo;?&amp;gt;
+&amp;lt;af:AdminResourceBase xmlns:mx=&amp;ldquo;http://www.adobe.com/2006/mxml&amp;quot; xmlns:appcore=&amp;ldquo;http://www.wookets.com/flex&amp;quot;
+creationComplete=&amp;ldquo;setup()&amp;rdquo;
+clipContent=&amp;ldquo;false&amp;rdquo; label=&amp;ldquo;Add&amp;rdquo;&amp;gt;
+&amp;lt;!&amp;ndash; control &amp;ndash;&amp;gt;
+&amp;lt;mx:Script&amp;gt;
+&amp;lt;![CDATA[
+import com.wookets.query.dto.Find;
+import appcore.query.Tide;
+import com.wookets.core.model.User;
+import com.wookets.track.model.AppAward;
+import mx.collections.ArrayCollection;
+private function setup():void {
+loadUsers();
+}
+public override function beforeSave():void {
+b_add.enabled = false;
+b_add.label = &amp;ldquo;adding&amp;hellip;&amp;rdquo;;</description>
+    </item>
+    
+    <item>
+      <title>Pond thoughts and another email</title>
+      <link>/blog/pond-thoughts-and-another-email/</link>
+      <pubDate>Tue, 21 Jun 2011 09:45:00 +0000</pubDate>
+      
+      <guid>/blog/pond-thoughts-and-another-email/</guid>
+      <description>How do I do labels?</description>
+    </item>
+    
+    <item>
+      <title>Literature label test</title>
+      <link>/blog/literature-label-test/</link>
+      <pubDate>Sun, 19 Jun 2011 17:45:00 +0000</pubDate>
+      
+      <guid>/blog/literature-label-test/</guid>
+      <description>Silent in the rain
+An overbearing flame
+This piece of text
+Is ever so lame</description>
+    </item>
+    
+    <item>
+      <title>Hmm thoughts label test</title>
+      <link>/blog/hmm-thoughts-label-test/</link>
+      <pubDate>Sun, 19 Jun 2011 17:37:00 +0000</pubDate>
+      
+      <guid>/blog/hmm-thoughts-label-test/</guid>
+      <description>Ghost whisperer&amp;hellip; Wow.</description>
+    </item>
+    
+    <item>
+      <title>Hibernate - null id in entry (don&#39;t flush the Session after an exception occurs)</title>
+      <link>/blog/hibernate---null-id-in-entry-dont-flush-the-session-after-an-exception-occurs/</link>
+      <pubDate>Mon, 13 Jun 2011 14:27:00 +0000</pubDate>
+      
+      <guid>/blog/hibernate---null-id-in-entry-dont-flush-the-session-after-an-exception-occurs/</guid>
+      <description>Exception:
+null id in entry (don&amp;rsquo;t flush the Session after an exception occurs)
+I was getting the above exception in spring hibernate junit jpa type test when trying to persist an entity. You actually get the exception after the entity is &amp;lsquo;persisted&amp;rsquo;. The error is thrown because of a validation type error with the database table (property not set when DB needs it to be set or something), but hibernate keeps chugging along and holds the object in session in a weird quasi not-persistent, but still in session state.</description>
+    </item>
+    
+    <item>
+      <title>Blog Syntax Highlighter</title>
+      <link>/blog/blog-syntax-highlighter/</link>
+      <pubDate>Tue, 31 May 2011 15:21:00 +0000</pubDate>
+      
+      <guid>/blog/blog-syntax-highlighter/</guid>
+      <description>Finally unlazy enough to get a good syntax highlighter&amp;hellip;
+Code:&amp;nbsp;http://alexgorbatchev.com/SyntaxHighlighter/
+Instructions:&amp;nbsp;http://www.cyberack.com/2007/07/adding-syntax-highlighter-to-blogger.html
+Escape L-trims:&amp;nbsp;http://accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php
+&amp;lt;!&amp;ndash; oxm integration &amp;ndash;&amp;gt;
+&amp;lt;bean id=&amp;ldquo;objectXmlMarshaller&amp;rdquo; class=&amp;ldquo;org.springframework.oxm.xstream.XStreamMarshaller&amp;rdquo;/&amp;gt;
+
+package com.wookets.hibernate;
+import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
+import org.hibernate.HibernateException;
+import org.hibernate.usertype.UserType;
+import org.springframework.oxm.xstream.XStreamMarshaller;
+import org.springframework.util.ObjectUtils;
+import com.wookets.spring.ServiceLocator;
+public class XmlType implements UserType {
+private static final int[] SQL_TYPES = { Types.CLOB };
+@Override
+public int[] sqlTypes() {
+return SQL_TYPES;
+}
+@Override
+public Class returnedClass() {</description>
+    </item>
+    
+    <item>
+      <title>Flex Mobile using StageWebView to show docs (ppt, excel, word, pdf)</title>
+      <link>/blog/flex-mobile-using-stagewebview-to-show-docs-ppt-excel-word-pdf/</link>
+      <pubDate>Thu, 26 May 2011 11:08:00 +0000</pubDate>
+      
+      <guid>/blog/flex-mobile-using-stagewebview-to-show-docs-ppt-excel-word-pdf/</guid>
+      <description>If you want to show documents (ppt, xls, rtf, doc, docx, pdf, etc) in your flex mobile application here is some code that should help. Note, this was tested on iOS. Your mileage may vary on andriod, but I assume it will work just fine. This only works because webkit has viewers for these file formats. No editing, just viewing.
+First - How to download a file from a remote server and store it in the application storage directory.</description>
+    </item>
+    
+    <item>
+      <title>Spring XStream Load Annotations and Fix MVC Issues</title>
+      <link>/blog/spring-xstream-load-annotations-and-fix-mvc-issues/</link>
+      <pubDate>Mon, 02 May 2011 14:51:00 +0000</pubDate>
+      
+      <guid>/blog/spring-xstream-load-annotations-and-fix-mvc-issues/</guid>
+      <description>Wow. Covering the full gamut today. From Flex-Swiz-Event Order to Javascript-jQuery-Image Scaling to Java-Spring-Xml&amp;nbsp;Marshalling.
+The problem I faced was this (http://forum.springsource.org/showthread.php?t=79963). Essentially, Spring MVC / XStream sometimes maps a returned object (see below) to an&amp;nbsp;incoherent&amp;nbsp;string of framework object binding instructions.
+The Spring MVC Service
+@Controller public class SessionService { @Autowired private ServerSessionContext serverSessionContext; @RequestMapping(value = &amp;ldquo;/validatesession&amp;rdquo;) public SessionValidationResponse validateSessionToken(@RequestParam String sessionToken) { SessionValidationResponse response = new SessionValidationResponse(); response.isValid = serverSessionContext.doesSessionExist(sessionToken); return response; } }</description>
+    </item>
+    
+    <item>
+      <title>jQuery Grow and Shrink an Image</title>
+      <link>/blog/jquery-grow-and-shrink-an-image/</link>
+      <pubDate>Mon, 02 May 2011 13:58:00 +0000</pubDate>
+      
+      <guid>/blog/jquery-grow-and-shrink-an-image/</guid>
+      <description>Example and source:
+http://wookets.com/code/javascript/jquerygrowshrink/
+Zip:&amp;nbsp;http://wookets.com/code/javascript/jquerygrowshrink/jquerygrowshrink.zip
+Just using the animate effect to grow and shrink it&amp;hellip; I don&amp;rsquo;t know, pretty simple. I guess I could add percentage scaling, but I&amp;rsquo;m a bit too lazy.</description>
+    </item>
+    
+    <item>
+      <title>Swiz Framework Post Construct Order of Events</title>
+      <link>/blog/swiz-framework-post-construct-order-of-events/</link>
+      <pubDate>Mon, 02 May 2011 13:05:00 +0000</pubDate>
+      
+      <guid>/blog/swiz-framework-post-construct-order-of-events/</guid>
+      <description>Example and source:
+http://wookets.com/code/flex/SwizPostConstruct/
+I&amp;rsquo;m trying to figure out why Swiz is actually firing events in the exact opposite order that it says in the documentation. The application startup [PostConstruct] is fired after creationComplete, but the [PostConstruct] of views and objects is happening before creationComplete. Not sure why it&amp;rsquo;s working like this. It was working fine before. Or so I thought.
+Anyway&amp;hellip; A good reason to never trust the firing order of events in flex.</description>
+    </item>
+    
+    <item>
+      <title>jQuery animate and fadeIn</title>
+      <link>/blog/jquery-animate-and-fadein/</link>
+      <pubDate>Thu, 28 Apr 2011 22:56:00 +0000</pubDate>
+      
+      <guid>/blog/jquery-animate-and-fadein/</guid>
+      <description>Source and example:
+http://wookets.com/code/javascript/jqueryanimate/
+Basically, we&amp;rsquo;re just moving an element and also fading it in&amp;hellip; Really nothing to it&amp;hellip; Btw, the picture of Matt was just because I was listening to High Violet while doing it and needed an image. If I could sing a baritone like him, I would not be writing this post.
+jQuery IS nice&amp;hellip; (nice to know MS is backing it in the new versions of IE)</description>
+    </item>
+    
+    <item>
+      <title>Spring REST XML / JSON Response Support</title>
+      <link>/blog/spring-rest-xml--json-response-support/</link>
+      <pubDate>Fri, 22 Apr 2011 14:22:00 +0000</pubDate>
+      
+      <guid>/blog/spring-rest-xml--json-response-support/</guid>
+      <description>Spent a while sifting and reading on this topic, so hopefully this will add or help your search. The goal is to accept an HTTP GET / POST (I suppose PUT and DELETE could work as well) and return a response in XML or JSON. spring-config.xml - Our spring configuration file for view resolution.
+&amp;lt;!&amp;ndash; oxm integration &amp;ndash;&amp;gt; &amp;lt;bean id=&amp;ldquo;objectXmlMarshaller&amp;rdquo; class=&amp;ldquo;org.springframework.oxm.xstream.XStreamMarshaller&amp;rdquo; /&amp;gt; &amp;lt;!&amp;ndash; rest support &amp;ndash;&amp;gt; &amp;lt;bean class=&amp;ldquo;org.springframework.web.servlet.view.ContentNegotiatingViewResolver&amp;rdquo;&amp;gt; &amp;lt;property name=&amp;ldquo;defaultContentType&amp;rdquo; value=&amp;ldquo;application/xml&amp;rdquo; /&amp;gt; &amp;lt;property name=&amp;ldquo;ignoreAcceptHeader&amp;rdquo; value=&amp;ldquo;true&amp;rdquo; /&amp;gt; &amp;lt;property name=&amp;ldquo;favorPathExtension&amp;rdquo; value=&amp;ldquo;true&amp;rdquo; /&amp;gt; &amp;lt;property name=&amp;ldquo;mediaTypes&amp;rdquo;&amp;gt; &amp;lt;map&amp;gt; &amp;lt;entry key=&amp;ldquo;xml&amp;rdquo; value=&amp;ldquo;application/xml&amp;rdquo; /&amp;gt; &amp;lt;entry key=&amp;ldquo;json&amp;rdquo; value=&amp;ldquo;application/json&amp;rdquo; /&amp;gt; &amp;lt;/map&amp;gt; &amp;lt;/property&amp;gt; &amp;lt;property name=&amp;ldquo;defaultViews&amp;rdquo;&amp;gt; &amp;lt;list&amp;gt; &amp;lt;bean class=&amp;ldquo;org.</description>
+    </item>
+    
+    <item>
+      <title>Spring 3 MVC pass param and respond via XML</title>
+      <link>/blog/spring-3-mvc-pass-param-and-respond-via-xml/</link>
+      <pubDate>Thu, 14 Apr 2011 14:45:00 +0000</pubDate>
+      
+      <guid>/blog/spring-3-mvc-pass-param-and-respond-via-xml/</guid>
+      <description>I was looking for a way to accept a basic POST / GET and return an XML (or JSON or open format) response. The gist is; I want to write the interface between my client (javascript / flex / another client) and my services (java / php / whatever you want) and be able to swap out any of these things, but not have to recode the other end. And do it using simple web protocols, not AMF where a client library or something &amp;lsquo;more&amp;rsquo; is needed.</description>
+    </item>
+    
+    <item>
+      <title>Managing Google Spreadsheets from Flex</title>
+      <link>/blog/managing-google-spreadsheets-from-flex/</link>
+      <pubDate>Tue, 12 Apr 2011 15:16:00 +0000</pubDate>
+      
+      <guid>/blog/managing-google-spreadsheets-from-flex/</guid>
+      <description>Update:
+Check out this&amp;hellip;
+http://www.wookets.com/code/flex/GSpreadUpdater/
+It uses a nice wrapper class from&amp;nbsp;http://www.farinspace.com/saving-form-data-to-google-spreadsheets/.
+Don&amp;rsquo;t try to update / search on values which have - in the cell&amp;hellip; I don&amp;rsquo;t know, it didn&amp;rsquo;t like it whenever I did it&amp;hellip; Probably have to escape it&amp;hellip;
+Old post:
+Example and source:
+http://wookets.com/code/flex/GSpreadDemo/
+The example is broken, because you&amp;rsquo;ll need a google username and password to access any spreadsheets (event public ones)&amp;hellip; I could have let you put in your own google username and password in the flex app and send them over the wire (to the php service), but I&amp;rsquo;d rather not have people entering account information to a demo app.</description>
+    </item>
+    
+    <item>
+      <title>Getting rid of Host Gator&#39;s custom error pages</title>
+      <link>/blog/getting-rid-of-host-gators-custom-error-pages/</link>
+      <pubDate>Thu, 07 Apr 2011 16:05:00 +0000</pubDate>
+      
+      <guid>/blog/getting-rid-of-host-gators-custom-error-pages/</guid>
+      <description>I don&amp;rsquo;t particularly like HostGator as a company&amp;hellip; Considering the inane 404 page they default your website to&amp;hellip; But to remove that ad crap&amp;hellip;
+1. Download the .htaccess file from the root of your server&amp;hellip;
+2. Add the following lines (where /403.shtml can be any webpage you want to show for the specified error)
+ErrorDocument 403 /403.shtmlErrorDocument 404 /404.shtmlErrorDocument 500 /500.shtml
+
+3. Upload and overwrite .htaccess
+http://support.hostgator.com/articles/cpanel/custom-error-pages
+Don&amp;rsquo;t know why they don&amp;rsquo;t have a cpanel solution, but&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Flex HTTP open, send, load functions</title>
+      <link>/blog/flex-http-open-send-load-functions/</link>
+      <pubDate>Thu, 07 Apr 2011 15:52:00 +0000</pubDate>
+      
+      <guid>/blog/flex-http-open-send-load-functions/</guid>
+      <description>An example of the three different ones. These don&amp;rsquo;t cover any mxml service type things. Maybe later.
+navigateToUrl - Will open a page with the url specified.
+sendToUrl - Will send a request behind the scenes, but won&amp;rsquo;t tell you what the response was&amp;hellip;
+URLLoader - Will allow you listen for a response or know when the request you just sent has been completed (acknowledged).&amp;nbsp;
+Example and source:
+http://wookets.com/code/flex/SendDataDemo/
+I should mention that for the URLLoader I had to stick a crossdomain.</description>
+    </item>
+    
+    <item>
+      <title>Pass in properties to a Flex ItemRenderer</title>
+      <link>/blog/pass-in-properties-to-a-flex-itemrenderer/</link>
+      <pubDate>Tue, 05 Apr 2011 14:10:00 +0000</pubDate>
+      
+      <guid>/blog/pass-in-properties-to-a-flex-itemrenderer/</guid>
+      <description>If you need to pass in some values to an item renderer, you can use the following util.
+package utils { import mx.core.ClassFactory; import mx.core.IFactory; public class ItemRendererUtil { public static function createWithProperties(renderer:Class, properties:Object):IFactory { var factory:ClassFactory = new ClassFactory(renderer); factory.properties = properties; return factory; } } } 
+And how to use on your datagroup / list&amp;hellip;
+&amp;lt;s:DataGroup dataProvider=&amp;ldquo;{new ArrayCollection(data as Array)}&amp;rdquo; itemRenderer=&amp;ldquo;{ItemRendererUtil.createWithProperties(renderers.ShuttleBoxRenderer, {stageLevel: stageLevel})}&amp;rdquo;&amp;gt; &amp;lt;s:layout&amp;gt; &amp;lt;s:HorizontalLayout/&amp;gt; &amp;lt;/s:layout&amp;gt; &amp;lt;/s:DataGroup&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>I hate active records and I hate functional models</title>
+      <link>/blog/i-hate-active-records-and-i-hate-functional-models/</link>
+      <pubDate>Mon, 04 Apr 2011 23:15:00 +0000</pubDate>
+      
+      <guid>/blog/i-hate-active-records-and-i-hate-functional-models/</guid>
+      <description>I once worked at a company which had a class that was 10,000 or so lines of code. This class was a &amp;lsquo;model&amp;rsquo; in which seemingly every function under the sun was imbedded into the object. Not only did it store referenced get and set variables, was mapped to a database table, had util functions, and database queries as well. I&amp;rsquo;m sorry, but a class with 10,000 lines of code from an application being worked on for only a few years is insane.</description>
+    </item>
+    
+    <item>
+      <title>Flex iOS - Beep Test iPad App</title>
+      <link>/blog/flex-ios---beep-test-ipad-app/</link>
+      <pubDate>Mon, 04 Apr 2011 21:26:00 +0000</pubDate>
+      
+      <guid>/blog/flex-ios---beep-test-ipad-app/</guid>
+      <description>I&#39;m making my soccer team run the beep test this Saturday, so I decided to code up an iPad app to help.&amp;nbsp;
+The app is written using a flex 4.5 hero build. I have&amp;nbsp;already tested it on my iPad 2 using the Air 2.6 ADT packager. Besides a hiccup when playing the very first beep, it runs silky smooth and feels stable.&amp;nbsp;
+http://www.wookets.com/code/flex/BeepTest/
+App dimensions are... width=&#34;1024&#34; height=&#34;768&#34; (iPad dimensions)</description>
+    </item>
+    
+    <item>
+      <title>Flex - Load apps within an app</title>
+      <link>/blog/flex---load-apps-within-an-app/</link>
+      <pubDate>Sat, 02 Apr 2011 11:19:00 +0000</pubDate>
+      
+      <guid>/blog/flex---load-apps-within-an-app/</guid>
+      <description>Example and source:
+http://wookets.com/code/flex/AppLoaderDemo/
+It should be noted that setting or trying to bind the source on the SWFLoader doesn&amp;rsquo;t work properly. As you change states within the parent app, you need to load and unload the whole app. This is best for memory management, but if you want to cache the app&amp;hellip; well, it doesn&amp;rsquo;t seem to work for me between states unless I load and unload the whole thing.</description>
+    </item>
+    
+    <item>
+      <title>Flex - Random Int Util</title>
+      <link>/blog/flex---random-int-util/</link>
+      <pubDate>Fri, 01 Apr 2011 23:44:00 +0000</pubDate>
+      
+      <guid>/blog/flex---random-int-util/</guid>
+      <description>Example and source:
+http://wookets.com/code/flex/RandomIntUtil/</description>
+    </item>
+    
+    <item>
+      <title>Flex - Squiggly SpellCheck Behavior for Spark TextArea</title>
+      <link>/blog/flex---squiggly-spellcheck-behavior-for-spark-textarea/</link>
+      <pubDate>Thu, 31 Mar 2011 12:42:00 +0000</pubDate>
+      
+      <guid>/blog/flex---squiggly-spellcheck-behavior-for-spark-textarea/</guid>
+      <description>Example and source:
+http://wookets.com/code/flex/spellcheckbehavior/</description>
+    </item>
+    
+    <item>
+      <title>Code - Adding Behaviors to Flex Components</title>
+      <link>/blog/code---adding-behaviors-to-flex-components/</link>
+      <pubDate>Tue, 29 Mar 2011 22:38:00 +0000</pubDate>
+      
+      <guid>/blog/code---adding-behaviors-to-flex-components/</guid>
+      <description>It is tempting to write your own flex components that extend the base components (TextInput, Button, etc), because you want to add some functionality or just add your own zip. Having undertaken such a task many times, I can say that things become a mess. Upgrading to a new SDK breaks things, tempts you to update components to the new SDK, breaking more things, etc. Another problem is that once you make your own super awesome button override, you want to use it everywhere, even though a lot of places won&amp;rsquo;t use the new functionality you enabled.</description>
+    </item>
+    
+    <item>
+      <title>Code: OrientDB</title>
+      <link>/blog/code-orientdb/</link>
+      <pubDate>Mon, 28 Mar 2011 22:02:00 +0000</pubDate>
+      
+      <guid>/blog/code-orientdb/</guid>
+      <description>Somewhere between yesterday and today, I came across OrientDB.
+http://code.google.com/p/orient/
+They (being the creators) make some bold claims.&amp;nbsp;
+&amp;ldquo;A single server makes the work of about 125 servers running&amp;nbsp;MySQL&amp;ldquo;&amp;ldquo;can store up to 150,000 records per second on common hardware&amp;rdquo;
+Features:&amp;nbsp;
+REST, Java APIs&amp;hellip;&amp;nbsp;
+Document, Object, SQL, Key-Value + other db form supports&amp;hellip; Basically a document storage and uses a grid store for the relationships. Everything (SQL, Key-Value, Object, etc) is built on top of those two things.</description>
+    </item>
+    
+    <item>
+      <title>Rambling: Persistent Data Stores</title>
+      <link>/blog/rambling-persistent-data-stores/</link>
+      <pubDate>Fri, 25 Mar 2011 14:09:00 +0000</pubDate>
+      
+      <guid>/blog/rambling-persistent-data-stores/</guid>
+      <description>There are many various data storage devices (talking software here) that accommodate various problems. All of these devices are very good at the specific (or few) use cases that they solve, but all have drawbacks. 
+SQL Databases - Structure data that can be queried. Also includes rigid data integrity and relationship constraints were added (foreign keys, etc). Added views to speed up and avoid joins. The main drawbacks, unless you buy an Oracle and an Engineer to go with it, optimization and clustering / fault tolerance can be trying.</description>
+    </item>
+    
+    <item>
+      <title>Spring Hibernate Open Session In View Filter</title>
+      <link>/blog/spring-hibernate-open-session-in-view-filter/</link>
+      <pubDate>Fri, 02 Dec 2005 22:03:00 +0000</pubDate>
+      
+      <guid>/blog/spring-hibernate-open-session-in-view-filter/</guid>
+      <description>Hibernate allows use to efficiently query relationships from a database via lazy-loading. However, relationships which are lazily-loaded can not be accessed if the hibernate session goes out of view.
+ #{Album.artist.name}
+
+Because of lazy loading, if you try to do the preceding relationship access in your EL (web page) statement, a lazy load error will be thrown. This is because if you are using JSF or some other non spring friendly web layer, and your session will cut out in the service layer.</description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>/blog/test/</link>
+      <pubDate>Fri, 02 Dec 2005 21:59:00 +0000</pubDate>
+      
+      <guid>/blog/test/</guid>
+      <description>test</description>
+    </item>
+    
+  </channel>
+</rss>

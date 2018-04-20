@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on Wookets Wove</title>
+    <link>/docs/</link>
+    <description>Recent content in Docs on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Mar 2018 13:36:17 -0500</lastBuildDate>
+    
+	<atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown</title>
+      <link>/docs/markdown/</link>
+      <pubDate>Sun, 18 Mar 2018 13:36:17 -0500</pubDate>
+      
+      <guid>/docs/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/docs/docker/</link>
+      <pubDate>Sun, 18 Mar 2018 13:17:54 -0500</pubDate>
+      
+      <guid>/docs/docker/</guid>
+      <description>Overview The official docker website gives you a good overview. More simply, docker also you to image your application and infrastructure and deploy it rapidly and repeatedly. This is done by creating an isolated environment (a container) that can run side-by-side with other containers on the same hardware. Think of containers as Virtual Machines but without the resource hoginess / slowness.
+Setup Downlaod Docker from the Docker Store. You&amp;rsquo;ll want to just grab the community edition.</description>
+    </item>
+    
+    <item>
+      <title>React.js</title>
+      <link>/docs/react/</link>
+      <pubDate>Fri, 16 Mar 2018 19:53:04 -0500</pubDate>
+      
+      <guid>/docs/react/</guid>
+      <description> Disclaimer I had some help.
+Overview React is a library for building user interfaces. Specifically the &amp;ldquo;view&amp;rdquo; portion of the MVC (model-view-controller) pattern. React is typically coupled with Redux or another Flux like pattern.
+While many previous UI libraries did their best to separate presentation (html) from code (javascript), react actually goes all in on have javascript (and its own extension jsx) build the UI.
+Setup </description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/docs/hugo/</link>
+      <pubDate>Tue, 13 Mar 2018 22:09:55 -0500</pubDate>
+      
+      <guid>/docs/hugo/</guid>
+      <description>Disclaimer I had some help.
+Overview Hugo is a static website generator. In my case, I was looking for a blog + some doc stuff. It&amp;rsquo;s always helpful to have an easy way to create pages. Sure, I looked at Jekyll, but Hugo turned out to be a bit easier. The reality is, it depends a bit on the theme you choose as well.
+Setup Follow the hugo quick setup.</description>
+    </item>
+    
+  </channel>
+</rss>

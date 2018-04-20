@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on Wookets Wove</title>
+    <link>/tags/architecture/</link>
+    <description>Recent content in Architecture on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Jan 2012 15:14:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Three Levels of Service</title>
+      <link>/blog/the-three-levels-of-service/</link>
+      <pubDate>Sun, 29 Jan 2012 15:14:00 +0000</pubDate>
+      
+      <guid>/blog/the-three-levels-of-service/</guid>
+      <description>Back when I first started programming, everything was about &amp;lsquo;The Three Tiers of server side applications.&amp;rsquo; Today, I find that not much has changed. Yes, the UI and top layers have been pushed to the client. If they haven&amp;rsquo;t in your apps, they should. And the bottom layer, the data layer as been almost stripped away via the ORM and Active Record patterns. Which is good, because we are getting to the guts, the middle layer, the business layer.</description>
+    </item>
+    
+    <item>
+      <title>Amazon Elastic Beanstalk with SSL</title>
+      <link>/blog/amazon-elastic-beanstalk-with-ssl/</link>
+      <pubDate>Fri, 11 Nov 2011 08:52:00 +0000</pubDate>
+      
+      <guid>/blog/amazon-elastic-beanstalk-with-ssl/</guid>
+      <description>When you deploy your first elastic beanstalk application the URL will similar to&amp;hellip;
+http://myapp-cname.elasticbeanstalk.com
+Where &amp;lsquo;myapp-cname&amp;rsquo; is the assigned cname when you first launch your environment.&amp;nbsp;
+What if we want to resolve our own domain, e.g.&amp;nbsp;
+http://myapp.yourdomain.com
+This is pretty straight forward (assuming some background in working with cnames)&amp;hellip;&amp;nbsp;
+CNAME
+1. Go into the Amazon AWS console and locate the elastic load balancer. This is generally found under EC2 -&amp;gt; load balancers.</description>
+    </item>
+    
+    <item>
+      <title>How to architect your next web app</title>
+      <link>/blog/how-to-architect-your-next-web-app/</link>
+      <pubDate>Thu, 06 Oct 2011 08:35:00 +0000</pubDate>
+      
+      <guid>/blog/how-to-architect-your-next-web-app/</guid>
+      <description>Separate the client and the server
+The server - responsible for complex shared business methods, transactions, data management, centralized storage, synchronization.
+The client - responsible for UI display and handling interactions, styling, components, etc.
+You should push as much as you can on to the client. Today&amp;rsquo;s javascript engines and multi-core processors can handle more computation. The client and server only talk using JSON, XML, REST, or AMF3 (if using flex) or similar methods.</description>
+    </item>
+    
+    <item>
+      <title>Web Application Project Structure</title>
+      <link>/blog/web-application-project-structure/</link>
+      <pubDate>Thu, 06 Oct 2011 08:12:00 +0000</pubDate>
+      
+      <guid>/blog/web-application-project-structure/</guid>
+      <description>Having done this stuff for over a decade, here is the current best organization of code I&amp;rsquo;ve seen for a large enterprise type project (it will work just as well for small projects).
+Btw, I should mention this is based on an architecture of fat client / thin server, but ability to shove off processing to one or the other. The server and client exchange information via JSON, XML, etc. The server does not render html.</description>
+    </item>
+    
+    <item>
+      <title>Amazon SQS &#43; SNS Conceptual</title>
+      <link>/blog/amazon-sqs--sns-conceptual/</link>
+      <pubDate>Thu, 01 Sep 2011 17:48:00 +0000</pubDate>
+      
+      <guid>/blog/amazon-sqs--sns-conceptual/</guid>
+      <description>The above diagram is a quick look at a very high level conceptual view of how one might go about structuring their web applications to take advantage of Amazon&amp;rsquo;s SNS and SQS.
+Amazon SNS -&amp;nbsp;http://aws.amazon.com/sns/
+Amazon SNS provides a Simple Notification Service for your apps. A line of thinking that maybe helpful would be viewing your app as sending a text message to the cloud. I use cloud as a generic term, because you are actually pushing your message to an unknown which will then re-route it to the system or services you wish to inform.</description>
+    </item>
+    
+  </channel>
+</rss>

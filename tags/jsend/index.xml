@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jsend on Wookets Wove</title>
+    <link>/tags/jsend/</link>
+    <description>Recent content in Jsend on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Jan 2013 10:32:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/jsend/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding JSend methods to Express 3.x</title>
+      <link>/blog/adding-jsend-methods-to-express-3.x/</link>
+      <pubDate>Thu, 03 Jan 2013 10:32:00 +0000</pubDate>
+      
+      <guid>/blog/adding-jsend-methods-to-express-3.x/</guid>
+      <description>About JSendJSend is a specification for how web servers should respond when they respond via JSON. I find it useful mainly for quickly parsing error and success response differences. &amp;nbsp;One could use HTTP error codes (I don&amp;rsquo;t know why), but JSend is useful for keeping the client receiver simple and generic when handling responses.&amp;nbsp;
+JSend Success Example{status: &amp;ldquo;success&amp;rdquo;, data: &amp;ldquo;this could be a json object&amp;rdquo;}
+JSend Error Example{status: &amp;ldquo;error&amp;rdquo;, code: &amp;ldquo;InvalidParamter&amp;rdquo;, message: &amp;ldquo;Name is required.</description>
+    </item>
+    
+  </channel>
+</rss>

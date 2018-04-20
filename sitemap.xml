@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/software/repoir/</loc>
+    <lastmod>2018-04-19T22:21:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/reeldata/</loc>
+    <lastmod>2018-04-19T22:17:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/inchworm/</loc>
+    <lastmod>2018-04-19T21:50:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/wongo/</loc>
+    <lastmod>2018-03-31T14:17:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/writing/roland/</loc>
+    <lastmod>2018-03-31T13:56:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/writing/pnl/</loc>
+    <lastmod>2018-03-31T13:50:47-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/patent-buddy/</loc>
+    <lastmod>2018-03-31T13:33:24-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/software/go-lang/</loc>
+    <lastmod>2018-03-21T22:31:29-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/markdown/</loc>
+    <lastmod>2018-03-18T13:36:17-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/docker/</loc>
+    <lastmod>2018-03-18T13:17:54-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/react/</loc>
+    <lastmod>2018-03-16T19:53:04-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/import-from-blogger/</loc>
+    <lastmod>2018-03-16T07:21:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/first-post/</loc>
+    <lastmod>2018-03-13T22:09:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/hugo/</loc>
+    <lastmod>2018-03-13T22:09:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/auditing-page-performance/</loc>
+    <lastmod>2017-08-26T08:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/angularjs-mixins/</loc>
+    <lastmod>2013-02-05T16:08:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/error-handling-with-express-3.x/</loc>
+    <lastmod>2013-01-03T15:51:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/adding-jsend-methods-to-express-3.x/</loc>
+    <lastmod>2013-01-03T10:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/changes-coming-soon/</loc>
+    <lastmod>2012-11-26T23:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/jackson-json-deserializer-using-groovy/</loc>
+    <lastmod>2012-02-22T18:14:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/using-amplify.js-to-mock-service-calls/</loc>
+    <lastmod>2012-02-09T13:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/jackson-auto-typing-objects/</loc>
+    <lastmod>2012-01-30T14:06:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/the-three-levels-of-service/</loc>
+    <lastmod>2012-01-29T15:14:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/amazon-dynamodb-groovy-dao-update/</loc>
+    <lastmod>2012-01-25T11:44:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/groovy-amazon-dynamodb-simple-example/</loc>
+    <lastmod>2012-01-22T09:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/amazon-s3-website-hosting-dns-gotchya/</loc>
+    <lastmod>2012-01-09T15:13:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/jquery.address-example/</loc>
+    <lastmod>2011-12-12T21:04:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/knockout.js-external-view/</loc>
+    <lastmod>2011-12-12T14:04:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/less-css-grid-example/</loc>
+    <lastmod>2011-12-11T10:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/website-redesign/</loc>
+    <lastmod>2011-12-11T10:40:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/static-vs-dynamic-groovy/</loc>
+    <lastmod>2011-12-03T22:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spring-aop-method-profiler/</loc>
+    <lastmod>2011-12-03T22:14:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/saml-2.0-using-groovy-and-spring-part-2/</loc>
+    <lastmod>2011-11-22T21:29:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/saml-2.0-using-groovy-and-spring-part-1/</loc>
+    <lastmod>2011-11-22T13:07:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/amazon-elastic-beanstalk-with-ssl/</loc>
+    <lastmod>2011-11-11T08:52:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spring-3.1-environment-profile/</loc>
+    <lastmod>2011-11-08T09:24:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/does-anyone-use-a-records-anymore/</loc>
+    <lastmod>2011-11-07T13:42:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/a-spring-controller-invoker-service-w-groovy-named-params/</loc>
+    <lastmod>2011-11-06T20:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spring-mvc-letting-tomcat-resolve-files/</loc>
+    <lastmod>2011-11-05T21:07:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/adobe-muse-pre-release-tinkering/</loc>
+    <lastmod>2011-10-30T18:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/how-to-compile-coffeescript-jade-stylus-in-eclipse/</loc>
+    <lastmod>2011-10-29T12:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/apache-ivy-private-repository/</loc>
+    <lastmod>2011-10-17T22:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/moving-beyond-the-web-page/</loc>
+    <lastmod>2011-10-07T08:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/how-to-architect-your-next-web-app/</loc>
+    <lastmod>2011-10-06T08:35:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/web-application-project-structure/</loc>
+    <lastmod>2011-10-06T08:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/labels-are-a-good-thing/</loc>
+    <lastmod>2011-10-05T10:16:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/unintelligent-design/</loc>
+    <lastmod>2011-10-05T10:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/haml-to-html-converter-sans-rails-project/</loc>
+    <lastmod>2011-09-17T12:59:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/groovy-1.8-logging/</loc>
+    <lastmod>2011-09-04T09:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/amazon-sqs--sns-conceptual/</loc>
+    <lastmod>2011-09-01T17:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/disque-commenting/</loc>
+    <lastmod>2011-08-22T22:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/using-s3-to-host-your-website/</loc>
+    <lastmod>2011-08-22T22:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/a-flex-model-tag/</loc>
+    <lastmod>2011-08-15T14:55:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/mvvm-in-javascript-html/</loc>
+    <lastmod>2011-08-05T13:37:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spring-contentnegotiatingviewresolver-exceptionhandler-mismatch-fix/</loc>
+    <lastmod>2011-08-05T13:33:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/ifnotset-function-in-php/</loc>
+    <lastmod>2011-08-03T17:22:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/leave-a-feature-out-of-your-next-project/</loc>
+    <lastmod>2011-08-03T10:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flash-builder-add-project-not-working-with-work-around/</loc>
+    <lastmod>2011-08-01T11:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/installing-subclipse--svn-on-lion/</loc>
+    <lastmod>2011-07-28T09:37:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flex-navigation-demo/</loc>
+    <lastmod>2011-07-21T19:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spotify-initial-reaction/</loc>
+    <lastmod>2011-07-14T19:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/jquery-raindrops-text/</loc>
+    <lastmod>2011-07-11T14:14:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flex-4-composite-component-templating/</loc>
+    <lastmod>2011-06-23T12:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/the-probability-of-a-hit-song-in-your-head-playing-on-the-radio-when-you-get-in-your-car/</loc>
+    <lastmod>2011-06-22T18:21:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/presentation-model-flex-and-swiz-framework/</loc>
+    <lastmod>2011-06-22T17:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/pond-thoughts-and-another-email/</loc>
+    <lastmod>2011-06-21T09:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/literature-label-test/</loc>
+    <lastmod>2011-06-19T17:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/hmm-thoughts-label-test/</loc>
+    <lastmod>2011-06-19T17:37:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/hibernate---null-id-in-entry-dont-flush-the-session-after-an-exception-occurs/</loc>
+    <lastmod>2011-06-13T14:27:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/blog-syntax-highlighter/</loc>
+    <lastmod>2011-05-31T15:21:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flex-mobile-using-stagewebview-to-show-docs-ppt-excel-word-pdf/</loc>
+    <lastmod>2011-05-26T11:08:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spring-xstream-load-annotations-and-fix-mvc-issues/</loc>
+    <lastmod>2011-05-02T14:51:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/jquery-grow-and-shrink-an-image/</loc>
+    <lastmod>2011-05-02T13:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/swiz-framework-post-construct-order-of-events/</loc>
+    <lastmod>2011-05-02T13:05:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/jquery-animate-and-fadein/</loc>
+    <lastmod>2011-04-28T22:56:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spring-rest-xml--json-response-support/</loc>
+    <lastmod>2011-04-22T14:22:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spring-3-mvc-pass-param-and-respond-via-xml/</loc>
+    <lastmod>2011-04-14T14:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/managing-google-spreadsheets-from-flex/</loc>
+    <lastmod>2011-04-12T15:16:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/getting-rid-of-host-gators-custom-error-pages/</loc>
+    <lastmod>2011-04-07T16:05:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flex-http-open-send-load-functions/</loc>
+    <lastmod>2011-04-07T15:52:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/pass-in-properties-to-a-flex-itemrenderer/</loc>
+    <lastmod>2011-04-05T14:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/i-hate-active-records-and-i-hate-functional-models/</loc>
+    <lastmod>2011-04-04T23:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flex-ios---beep-test-ipad-app/</loc>
+    <lastmod>2011-04-04T21:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flex---load-apps-within-an-app/</loc>
+    <lastmod>2011-04-02T11:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flex---random-int-util/</loc>
+    <lastmod>2011-04-01T23:44:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/flex---squiggly-spellcheck-behavior-for-spark-textarea/</loc>
+    <lastmod>2011-03-31T12:42:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/code---adding-behaviors-to-flex-components/</loc>
+    <lastmod>2011-03-29T22:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/code-orientdb/</loc>
+    <lastmod>2011-03-28T22:02:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/rambling-persistent-data-stores/</loc>
+    <lastmod>2011-03-25T14:09:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/spring-hibernate-open-session-in-view-filter/</loc>
+    <lastmod>2005-12-02T22:03:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/test/</loc>
+    <lastmod>2005-12-02T21:59:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/architecture/</loc>
+    <lastmod>2012-01-29T15:14:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2018-03-16T07:21:26-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/code/</loc>
+    <lastmod>2012-02-22T18:14:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/docs/</loc>
+    <lastmod>2018-03-18T13:36:17-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/errors/</loc>
+    <lastmod>2013-01-03T15:51:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/express/</loc>
+    <lastmod>2013-01-03T15:51:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/jsend/</loc>
+    <lastmod>2013-01-03T10:32:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/literature/</loc>
+    <lastmod>2011-06-19T17:45:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/music/</loc>
+    <lastmod>2011-07-14T19:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/node/</loc>
+    <lastmod>2013-01-03T15:51:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/software/</loc>
+    <lastmod>2018-04-19T22:21:25-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2012-01-29T15:14:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/thoughts/</loc>
+    <lastmod>2011-11-07T13:42:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-04-19T22:21:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/writing/</loc>
+    <lastmod>2018-03-31T13:56:16-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

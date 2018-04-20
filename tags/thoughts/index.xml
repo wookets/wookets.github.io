@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thoughts on Wookets Wove</title>
+    <link>/tags/thoughts/</link>
+    <description>Recent content in Thoughts on Wookets Wove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Nov 2011 13:42:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Does anyone use A-Records anymore?</title>
+      <link>/blog/does-anyone-use-a-records-anymore/</link>
+      <pubDate>Mon, 07 Nov 2011 13:42:00 +0000</pubDate>
+      
+      <guid>/blog/does-anyone-use-a-records-anymore/</guid>
+      <description>My blog keeps trying to ping my Amazon S3 account to serve content. FYI, my main page wookets.com is &amp;nbsp;hosted on Amazon S3 in a bucket. The bucket is web enabled with a policy file (see previous post). However, this blog is hosted on Google&amp;rsquo;s blogger.com.
+My Hover DNS settings had three A-Records for my blog that resolved to google&amp;rsquo;s server, but checking out the latest Google blogger docs it seems like those A-Records are now defunct.</description>
+    </item>
+    
+    <item>
+      <title>Moving beyond the web page</title>
+      <link>/blog/moving-beyond-the-web-page/</link>
+      <pubDate>Fri, 07 Oct 2011 08:18:00 +0000</pubDate>
+      
+      <guid>/blog/moving-beyond-the-web-page/</guid>
+      <description>The barrier to entry for web development and systems configuration is so low that it is applicable to individuals with enough cognitive ability to process a work flow. That pool may be small, as many can&amp;rsquo;t correctly comprehend their own work flow or the ideal. However, software architects will be whittled down, forced to join the engineers and scientists in becoming ever more engrained in fluid repeatable generic design patterns not just for a monitor or a website, but for a machine of specific utility.</description>
+    </item>
+    
+    <item>
+      <title>Labels are a good thing</title>
+      <link>/blog/labels-are-a-good-thing/</link>
+      <pubDate>Wed, 05 Oct 2011 10:16:00 +0000</pubDate>
+      
+      <guid>/blog/labels-are-a-good-thing/</guid>
+      <description>Normal 0     false false false  EN-US JA X-NONE                  /* Style Definitions */ table.MsoNormalTable {mso-style-name:&#34;Table Normal&#34;; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-priority:99; mso-style-parent:&#34;&#34;; mso-padding-alt:0in 5.4pt 0in 5.4pt; mso-para-margin:0in; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:12.0pt; font-family:Cambria; mso-ascii-font-family:Cambria; mso-ascii-theme-font:minor-latin; mso-hansi-font-family:Cambria; mso-hansi-theme-font:minor-latin;}   In a single word you can understand the whole of a human being simply by the label he or she applies unto themself.</description>
+    </item>
+    
+    <item>
+      <title>Unintelligent Design</title>
+      <link>/blog/unintelligent-design/</link>
+      <pubDate>Wed, 05 Oct 2011 10:12:00 +0000</pubDate>
+      
+      <guid>/blog/unintelligent-design/</guid>
+      <description>Normal 0     false false false  EN-US JA X-NONE                  /* Style Definitions */ table.MsoNormalTable {mso-style-name:&#34;Table Normal&#34;; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-style-noshow:yes; mso-style-priority:99; mso-style-parent:&#34;&#34;; mso-padding-alt:0in 5.4pt 0in 5.4pt; mso-para-margin:0in; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:12.0pt; font-family:Cambria; mso-ascii-font-family:Cambria; mso-ascii-theme-font:minor-latin; mso-hansi-font-family:Cambria; mso-hansi-theme-font:minor-latin;}   Creatonism, it doesn’t matter what you call it really.</description>
+    </item>
+    
+    <item>
+      <title>Leave a feature out of your next project</title>
+      <link>/blog/leave-a-feature-out-of-your-next-project/</link>
+      <pubDate>Wed, 03 Aug 2011 10:32:00 +0000</pubDate>
+      
+      <guid>/blog/leave-a-feature-out-of-your-next-project/</guid>
+      <description>Apple, undisputed masters of marketing and sales, do one thing extremely well. Yes, great showmanship, great ecosystem (we&amp;rsquo;ll take care of you) and great product quality are part of their strategy. However, less talked about is how they remove features. How can you ship a modern desktop pc without a DVD drive? What about the lack of even batting an eye at bluray? Hdmi out? VGA out? Dvi out? All are out or never made it on a single laptop.</description>
+    </item>
+    
+    <item>
+      <title>The probability of a &#39;hit&#39; song in your head playing on the radio when you get in your car</title>
+      <link>/blog/the-probability-of-a-hit-song-in-your-head-playing-on-the-radio-when-you-get-in-your-car/</link>
+      <pubDate>Wed, 22 Jun 2011 18:21:00 +0000</pubDate>
+      
+      <guid>/blog/the-probability-of-a-hit-song-in-your-head-playing-on-the-radio-when-you-get-in-your-car/</guid>
+      <description>On my way to hockey this morning (6:45am), Sufjan Stevens (hopefully I just butchered his name) was playing on the current. It just happened to be the song that was stuck in my head, since they played it on the radio the day before (at least the female backing harmony chorus part was stuck in my head). Btw, the song is from Age of Adz, but I haven&amp;rsquo;t the foggiest about the name.</description>
+    </item>
+    
+    <item>
+      <title>Pond thoughts and another email</title>
+      <link>/blog/pond-thoughts-and-another-email/</link>
+      <pubDate>Tue, 21 Jun 2011 09:45:00 +0000</pubDate>
+      
+      <guid>/blog/pond-thoughts-and-another-email/</guid>
+      <description>How do I do labels?</description>
+    </item>
+    
+    <item>
+      <title>Hmm thoughts label test</title>
+      <link>/blog/hmm-thoughts-label-test/</link>
+      <pubDate>Sun, 19 Jun 2011 17:37:00 +0000</pubDate>
+      
+      <guid>/blog/hmm-thoughts-label-test/</guid>
+      <description>Ghost whisperer&amp;hellip; Wow.</description>
+    </item>
+    
+  </channel>
+</rss>

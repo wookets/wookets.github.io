@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="generator" content="Hugo 0.37.1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Code - Adding Behaviors to Flex Components </title>
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="map[name:Sean Wesenberg uri:https://plus.google.com/111523202047342274226]">
+
+
+  <meta property="og:title" content="Code - Adding Behaviors to Flex Components" />
+<meta property="og:description" content="It is tempting to write your own flex components that extend the base components (TextInput, Button, etc), because you want to add some functionality or just add your own zip. Having undertaken such a task many times, I can say that things become a mess. Upgrading to a new SDK breaks things, tempts you to update components to the new SDK, breaking more things, etc. Another problem is that once you make your own super awesome button override, you want to use it everywhere, even though a lot of places won&rsquo;t use the new functionality you enabled." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/code---adding-behaviors-to-flex-components/" />
+
+
+
+<meta property="article:published_time" content="2011-03-29T22:38:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2011-03-29T22:38:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="/blog/code---adding-behaviors-to-flex-components/">  
+
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAYAAACGVs+MAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAABKhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICAgICAgICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDx0aWZmOkNvbXByZXNzaW9uPjU8L3RpZmY6Q29tcHJlc3Npb24+CiAgICAgICAgIDx0aWZmOlhSZXNvbHV0aW9uPjcyPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjMyPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6SW1hZ2VVbmlxdWVJRD5kNmFiMzFhMzI1MTVhMzhlMDAwMDAwMDAwMDAwMDAwMDwvZXhpZjpJbWFnZVVuaXF1ZUlEPgogICAgICAgICA8ZXhpZjpDb2xvclNwYWNlPjE8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">
+
+
+  <link href="/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/css/master.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.demo.css" rel="stylesheet" type="text/css">
+
+ <link href="/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">Wookets Wove</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">Wookets Wove</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/blog/" >Blog</a></li>
+    
+    <li><a href="/docs/" >Docs</a></li>
+    
+    <li><a href="/faq/" >Faq</a></li>
+    
+    <li><a href="/software/" >Software</a></li>
+    
+    <li><a href="/writing/" >Writing</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+<div class="push-center" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="Code - Adding Behaviors to Flex Components">
+<meta itemprop="description" content="It is tempting to write your own flex components that extend the base components (TextInput, Button, etc), because you want to add some functionality or just add your own zip. Having undertaken such a task many times, I can say that things become a mess. Upgrading to a new SDK breaks things, tempts you to update components to the new SDK, breaking more things, etc. Another problem is that once you make your own super awesome button override, you want to use it everywhere, even though a lot of places won&rsquo;t use the new functionality you enabled.">
+
+
+<meta itemprop="datePublished" content="2011-03-29T22:38:00&#43;00:00" />
+<meta itemprop="dateModified" content="2011-03-29T22:38:00&#43;00:00" />
+<meta itemprop="wordCount" content="807">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<div id="hero">
+    <h1 itemprop="headline">  Code - Adding Behaviors to Flex Components</h1>
+    
+	<time class="post-time"><span class="icon">
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+</span>
+
+<span class="icon">
+ <i class="fa fa-pencil" aria-hidden="true"></i>
+</span>
+
+  Published: <time datetime="2011-03-29T22:38:00&#43;00:00">29 Mar, 2011</time>
+
+</time>
+</div>
+<div id="post-box">
+<div id="post" itemprop="articleBody">
+    
+    <p>It is tempting to write your own flex components that extend the base components (TextInput, Button, etc), because you want to add some functionality or just add your own zip. Having undertaken such a task many times, I can say that things become a mess. Upgrading to a new SDK breaks things, tempts you to update components to the new SDK, breaking more things, etc. Another problem is that once you make your own super awesome button override, you want to use it everywhere, even though a lot of places won&rsquo;t use the new functionality you enabled. This complicates and causes things to break&hellip; But&hellip;<br /><br /><br /><a name='more'></a><br /><br />Something I prefer doing is the concept of adding &lsquo;behavoirs&rsquo; that extend the functionality of a component, without actually extending it. Your code becomes standard &lt;s:Button /&gt; and you get to add new functionality.&nbsp;It is done simply by creating a class which contains the desired functionality you want to achieve.<br /><br />Let&rsquo;s say you want a TextInput component with prompt support. This means, if the TextInput is empty, it will instead show a &lsquo;prompt&rsquo; giving the user a hint of what they should type in or labeling the field. A common one is a &lsquo;Search&rsquo; field.<br /><br />You could do one of a few things:<br /><br />1. You can override the TextInput component with your own and name it &lsquo;TextInput&rsquo;. The problem with this is confusion, but the benefit is that it&rsquo;s easy to use and if you need more functionality, you just keep tacking stuff on. It gets pretty ugly, pretty fast.<br /><br />2. You could create a new component PromptTextInput. The issue with this is, what happens if you want to add another feature on to TextInput. Say built-in validation or maybe a list that pops up below the field with results. Do you make a new component, do you add the features to the PromptTextInput component you just made?<br /><br />3. Create a &lsquo;behavior&rsquo; that sits outside of the component and interacts with the component. This means, no overriding the component, no deciding between one or two, and add features ala-cart for the use case that you are attempting.<br /><br />A behavior for a component is much like the default Flex validation framework. You write your views using the standard component set, but when you want to add some functionality, you add a behavior. A behavior sits in the &lt;fx:Declerations&gt; tags and references the target component.<br /><br />Enough talking, here is some code&hellip;<br /><br /><pre style="background-image: URL(http://2.bp.blogspot.com/_z5ltvMQPaa8/SjJXr_U2YBI/AAAAAAAAAAM/46OqEP32CJ8/s320/codebg.gif); background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;"> &lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;utf-8&rdquo;?&gt;  <br /> &lt;s:Application xmlns:fx=&ldquo;<a href="http://ns.adobe.com/mxml/2009&quot;">http://ns.adobe.com/mxml/2009&quot;</a> xmlns:s=&ldquo;library://ns.adobe.com/flex/spark&rdquo;  <br />         xmlns:mx=&ldquo;library://ns.adobe.com/flex/mx&rdquo; minWidth=&ldquo;955&rdquo; minHeight=&ldquo;600&rdquo;  <br />         xmlns:behaviors=&ldquo;behaviors.*&rdquo; viewSourceURL=&ldquo;srcview/index.html&rdquo;&gt;  <br />   <br />  &lt;fx:Declarations&gt;  <br />   &lt;behaviors:PromptBehavior target=&ldquo;{i_text}&rdquo; promptText=&ldquo;search&hellip;&rdquo;/&gt;  <br />  &lt;/fx:Declarations&gt;  <br />   <br />  &lt;s:TextInput id=&ldquo;i_text&rdquo; horizontalCenter=&ldquo;0&rdquo; verticalCenter=&ldquo;-15&rdquo;/&gt;  <br />  &lt;s:Button label=&ldquo;Button&rdquo; horizontalCenter=&ldquo;0&rdquo; verticalCenter=&ldquo;15&rdquo;/&gt;  <br />    <br /> &lt;/s:Application&gt;  <br />   <br /></code></pre><br />And the actual Behavior class&hellip;<br /><br /><pre style="background-image: URL(http://2.bp.blogspot.com/_z5ltvMQPaa8/SjJXr_U2YBI/AAAAAAAAAAM/46OqEP32CJ8/s320/codebg.gif); background: #f0f0f0; border: 1px dashed #CCCCCC; color: black; font-family: arial; font-size: 12px; height: auto; line-height: 20px; overflow: auto; padding: 0px; text-align: left; width: 99%;"><code style="color: black; word-wrap: normal;"> package behaviors {  <br />   <br />  import flash.events.FocusEvent;  <br />    <br />  import mx.core.UIComponent;  <br />  import mx.events.FlexEvent;  <br />    <br />  import spark.components.TextInput;  <br />  import spark.events.TextOperationEvent;  <br />   <br />  public class PromptBehavior {  <br />   <br />   private var _target:TextInput;  <br />   private var _promptText:String;  <br />   <br />   private var _justFocusedIn:Boolean = false;  <br />   <br />   private var _originalColor:uint;  <br />   private var _originalStyle:String;  <br />     <br />   public function register():void {  <br />    if(!_target || !_promptText) {  <br />     return;// wait until both set&hellip;  <br />    }  <br />      <br />    var input:TextInput = _target;  <br />      <br />    // save original settings for later  <br />    _originalColor = input.getStyle(&ldquo;color&rdquo;);  <br />    _originalStyle = input.getStyle(&ldquo;fontStyle&rdquo;);  <br />   <br />    // on creation, check to see if we need to add prompt  <br />    input.addEventListener(FlexEvent.CREATION_COMPLETE, handleCreation);  <br />   <br />    // on focus, remove prompt  <br />    input.addEventListener(FocusEvent.FOCUS_IN, handleFocusIn);  <br />    input.addEventListener(FocusEvent.FOCUS_OUT, handleFocusOut);  <br />   <br />    //add change listener (if we fill in stuff behind the scenes, remove prompt styling)  <br />    input.addEventListener(TextOperationEvent.CHANGE, handleTextChange);  <br />    input.addEventListener(FlexEvent.VALUE_COMMIT, handleValueChange);  <br />   }  <br />   <br />   public function unregister():void {  <br />    var input:TextInput = _target;  <br />    input.removeEventListener(FlexEvent.CREATION_COMPLETE, handleCreation);  <br />    input.removeEventListener(FocusEvent.FOCUS_IN, handleFocusIn);  <br />    input.removeEventListener(FocusEvent.FOCUS_OUT, handleFocusOut);  <br />    input.removeEventListener(TextOperationEvent.CHANGE, handleTextChange);  <br />    input.removeEventListener(FlexEvent.VALUE_COMMIT, handleValueChange);  <br />   }  <br />     <br />   public function set target(value:TextInput):void {  <br />    _target = value;  <br />    register();  <br />   }  <br />     <br />   public function set promptText(value:String):void {  <br />    _promptText = value;  <br />    register();  <br />   }  <br />   <br />   private function handleCreation(event:FlexEvent):void {  <br />    var input:TextInput = event.currentTarget as TextInput;  <br />   <br />    if (isEmpty(input.text)) {  <br />     input.text = _promptText;  <br />     addPromptStyle(input);  <br />    }  <br />   }  <br />   <br />   private function handleFocusIn(event:FocusEvent):void {  <br />    var input:TextInput = event.currentTarget as TextInput;  <br />    removePromptStyle(input); //remove prompt if it is active and we just focused in  <br />   <br />    if (input.text == _promptText) {  <br />     _justFocusedIn = true;  <br />     input.text = &ldquo;&rdquo;;  <br />    }  <br />   }  <br />   <br />   private function handleFocusOut(event:FocusEvent):void {  <br />    var input:TextInput = event.currentTarget as TextInput;  <br />   <br />    if (isEmpty(input.text)) {  <br />     input.text = _promptText;  <br />     addPromptStyle(input);  <br />    }  <br />   }  <br />   <br />   private function handleTextChange(event:TextOperationEvent):void {  <br />    var input:TextInput = event.currentTarget as TextInput;  <br />    removePromptStyle(input);  <br />   }  <br />   <br />   private function handleValueChange(event:FlexEvent):void {  <br />    var input:TextInput = event.currentTarget as TextInput;  <br />   <br />    if (_justFocusedIn) {  <br />     _justFocusedIn = false;  <br />     return;  <br />    }  <br />   <br />    if (isEmpty(input.text)) {  <br />     input.text = _promptText;  <br />     addPromptStyle(input);  <br />    } else {  <br />     removePromptStyle(input);  <br />    }  <br />   }  <br />   <br />   private function addPromptStyle(input:TextInput):void {  <br />    input.setStyle(&ldquo;color&rdquo;, 0x999999);  <br />    input.setStyle(&ldquo;fontStyle&rdquo;, &ldquo;italic&rdquo;);  <br />   }  <br />   <br />   private function removePromptStyle(input:TextInput):void {  <br />    input.setStyle(&ldquo;color&rdquo;, _originalColor);  <br />    input.setStyle(&ldquo;fontStyle&rdquo;, _originalStyle);  <br />   }  <br />   <br />   private function isEmpty(value:String):Boolean {  <br />    if (value == null || value == &ldquo;&rdquo;) {  <br />     return true;  <br />    }  <br />    return false;  <br />   }  <br />   <br />  }  <br /> }  </code></pre><br />What I would like to see next from Adobe is inline support of this stuff, so instead of declaring behaviors in our &lt;fx:Declaration /&gt;. We can declare them as children of components.<br /><br />&lt;s:TextInput&gt;<br />&nbsp;&nbsp;&lt;be:PromptBehavior /&gt;<br />&lt;/s:TextInput&gt;<br /><br />What I wonder is if we could rewrite many of these components and simply rely on behaviors to add functionality that isn&rsquo;t absolutely crucial. Perhaps this would speed up the creation and efficiency of the view stack?</p>
+
+
+</div>
+
+    <div class="">
+        <p>
+  Published
+  
+    
+      by <span itemprop="author">map[name:Sean Wesenberg uri:https://plus.google.com/111523202047342274226]</span>
+    
+  
+  <time datetime="2011-03-29T22:38:00&#43;00:00">
+    29 Mar, 2011
+  </time>
+  
+  
+  using <span itemprop="wordCount">807</span> words.
+</p>
+
+        
+
+
+
+    </div>
+    
+    
+    
+</div>
+</div>
+</main>
+  <footer>   <footer id="footer">
+    <nav>
+      <ul>
+        <li><span>Wookets</span></li>
+        <li>
+          <a href="https://www.linkedin.com/in/wookets/">Connect on LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wookets">Give a shout on Twitter!</a>
+        </li>
+      </ul>
+    </nav>
+    <p>&copy; P.A.Wookets</p>
+  </footer> </footer>
+
+
+  <script src="/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/js/master.js" type="text/javascript">
+  </script>
+</body>
+
+</html>
